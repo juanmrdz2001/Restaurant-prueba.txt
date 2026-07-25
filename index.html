@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+ 
+
+  <meta
+
+    name="viewport"
+
+    content="width=device-width, initial-scale=1.0"
+
+  >
+
+ 
+
+  <title>Restaurant</title>
+
+ 
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="css/login.css">
+
+  <link rel="stylesheet" href="css/mesas.css">
+
+ 
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+  <main id="app">
+
+ 
+
+    <section
+
+      id="pantallaLogin"
+
+      class="pantallaLogin"
+
+    >
+
+ 
+
+      <div class="loginFondo"></div>
+
+ 
+
+      <div class="loginContenido">
+
+ 
+
+        <div class="loginMarca">
+
+ 
+
+          <div class="loginLogo">
+
+            🍽️
+
+          </div>
+
+ 
+
+          <h1>Restaurant</h1>
+
+ 
+
+          <p>
+
+            Sistema de administración
+
+          </p>
+
+ 
+
+        </div>
+
+ 
+
+        <form
+
+          id="formLogin"
+
+          class="loginFormulario"
+
+        >
+
+ 
+
+          <h2>Iniciar sesión</h2>
+
+ 
+
+          <p class="loginSubtitulo">
+
+            Escribe tus datos para entrar al sistema
+
+          </p>
+
+ 
+
+          <label for="usuario">
+
+            Usuario
+
+          </label>
+
+ 
+
+          <div class="campoLogin">
+
+ 
+
+            <span>👤</span>
+
+ 
+
+            <input
+
+              id="usuario"
+
+              name="usuario"
+
+              type="text"
+
+              placeholder="Escribe tu usuario"
+
+              autocomplete="username"
+
+              required
+
+            >
+
+ 
+
+          </div>
+
+ 
+
+          <label for="password">
+
+            Contraseña
+
+          </label>
+
+ 
+
+          <div class="campoLogin">
+
+ 
+
+            <span>🔒</span>
+
+ 
+
+            <input
+
+              id="password"
+
+              name="password"
+
+              type="password"
+
+              placeholder="Escribe tu contraseña"
+
+              autocomplete="current-password"
+
+              required
+
+            >
+
+ 
+
+            <button
+
+              id="btnMostrarPassword"
+
+              class="btnMostrarPassword"
+
+              type="button"
+
+              aria-label="Mostrar contraseña"
+
+            >
+
+              👁️
+
+            </button>
+
+ 
+
+          </div>
+
+ 
+
+          <p
+
+            id="mensajeLogin"
+
+            class="mensajeLogin"
+
+          ></p>
+
+ 
+
+          <button
+
+            id="btnEntrar"
+
+            class="btnEntrar"
+
+            type="submit"
+
+          >
+
+            Entrar
+
+          </button>
+
+ 
+
+          <div class="usuariosPrueba">
+
+ 
+
+            <p>Usuarios iniciales</p>
+
+ 
+
+            <div class="usuariosPruebaGrid">
+
+ 
+
+              <button
+
+                type="button"
+
+                class="usuarioPrueba"
+
+                data-usuario="admin"
+
+              >
+
+                Administrador
+
+              </button>
+
+ 
+
+              <button
+
+                type="button"
+
+                class="usuarioPrueba"
+
+                data-usuario="cajero"
+
+              >
+
+                Cajero
+
+              </button>
+
+ 
+
+              <button
+
+                type="button"
+
+                class="usuarioPrueba"
+
+                data-usuario="mesero"
+
+              >
+
+                Mesero
+
+              </button>
+
+ 
+
+              <button
+
+                type="button"
+
+                class="usuarioPrueba"
+
+                data-usuario="cocina"
+
+              >
+
+                Cocina
+
+              </button>
+
+ 
+
+            </div>
+
+ 
+
+          </div>
+
+ 
+
+        </form>
+
+ 
+
+        <div class="loginPie">
+
+ 
+
+          <div>
+
+            <strong id="fechaLogin"></strong>
+
+            <span id="horaLogin"></span>
+
+          </div>
+
+ 
+
+          <span class="estadoServidor">
+
+            <span class="puntoServidor"></span>
+
+            Sistema conectado
+
+          </span>
+
+ 
+
+        </div>
+
+ 
+
+      </div>
+
+ 
+
+    </section>
+
+ 
+
+<section
+
+  id="pantallaSistema"
+
+  class="pantallaSistema oculto"
+
+>
+
+ 
+
+  <header class="encabezadoSistema">
+
+ 
+
+    <div class="marcaEncabezado">
+
+      <strong>🍽️ Restaurant</strong>
+
+    </div>
+
+ 
+
+    <div class="datosUsuario">
+
+ 
+
+      <span id="nombreUsuarioActivo"></span>
+
+ 
+
+      <span id="rolUsuarioActivo"></span>
+
+ 
+
+      <button
+
+        id="btnCerrarSesion"
+
+        type="button"
+
+      >
+
+        Cerrar sesión
+
+      </button>
+
+ 
+
+    </div>
+
+ 
+
+  </header>
+
+ 
+
+  <!-- PANTALLA TEMPORAL PARA OTROS USUARIOS -->
+
+  <section
+
+    id="pantallaBienvenida"
+
+    class="contenidoTemporal oculto"
+
+  >
+
+ 
+
+    <h2 id="tituloBienvenida">
+
+      Bienvenido
+
+    </h2>
+
+ 
+
+    <p>
+
+      El inicio de sesión está funcionando.
+
+    </p>
+
+ 
+
+  </section>
+
+ 
+
+<!-- PANTALLA DEL MESERO -->
+
+<section
+
+  id="pantallaMesero"
+
+  class="pantallaMesero oculto"
+
+>
+
+ 
+
+  <!-- VISTA DE MESAS -->
+
+  <div id="vistaMesas">
+
+ 
+
+    <div class="barraMesero">
+
+ 
+
+      <div>
+
+        <h1>Mesas del restaurante</h1>
+
+ 
+
+        <p>
+
+          Selecciona una mesa para abrir o consultar su pedido.
+
+        </p>
+
+      </div>
+
+ 
+
+      <button
+
+        id="btnActualizarMesas"
+
+        class="btnActualizarMesas"
+
+        type="button"
+
+      >
+
+        🔄 Actualizar
+
+      </button>
+
+ 
+
+    </div>
+
+ 
+
+    <div class="leyendaMesas">
+
+ 
+
+      <span>
+
+        <i class="colorEstado libre"></i>
+
+        Libre
+
+      </span>
+
+ 
+
+      <span>
+
+        <i class="colorEstado ocupada"></i>
+
+        Ocupada
+
+      </span>
+
+ 
+
+      <span>
+
+        <i class="colorEstado seleccionada"></i>
+
+        Seleccionada
+
+      </span>
+
+ 
+
+      <span>
+
+        <i class="colorEstado cuenta"></i>
+
+        Por cobrar
+
+      </span>
+
+ 
+
+    </div>
+
+ 
+
+    <div
+
+      id="detalleMesaSeleccionada"
+
+      class="detalleMesaSeleccionada oculto"
+
+    >
+
+ 
+
+      <div>
+
+ 
+
+        <span>Mesa seleccionada</span>
+
+ 
+
+        <strong id="nombreMesaSeleccionada">
+
+          Mesa
+
+        </strong>
+
+ 
+
+      </div>
+
+ 
+
+      <button
+
+        id="btnAbrirMesa"
+
+        type="button"
+
+      >
+
+        Abrir pedido
+
+      </button>
+
+ 
+
+    </div>
+
+ 
+
+    <div
+
+      id="contenedorMesas"
+
+      class="contenedorMesas"
+
+    >
+
+ 
+
+      <p class="cargandoMesas">
+
+        Cargando mesas...
+
+      </p>
+
+ 
+
+    </div>
+
+ 
+
+  </div>
+
+ 
+
+  <!-- VISTA DEL PEDIDO DE LA MESA -->
+
+  <section
+
+    id="vistaPedidoMesa"
+
+    class="vistaPedidoMesa oculto"
+
+  >
+
+ 
+
+    <header class="encabezadoPedidoMesa">
+
+ 
+
+      <button
+
+        id="btnRegresarMesas"
+
+        class="btnRegresarMesas"
+
+        type="button"
+
+      >
+
+        ← Mesas
+
+      </button>
+
+ 
+
+      <div>
+
+ 
+
+        <span>Pedido actual</span>
+
+ 
+
+        <h1 id="tituloPedidoMesa">
+
+          Mesa
+
+        </h1>
+
+ 
+
+      </div>
+
+ 
+
+      <span
+
+        id="estadoPedidoMesa"
+
+        class="estadoPedidoActual"
+
+      >
+
+        Libre
+
+      </span>
+
+ 
+
+    </header>
+
+ 
+
+    <div class="pestanasPedido">
+
+ 
+
+      <div
+
+        id="pestanasComensales"
+
+        class="pestanasComensales"
+
+      ></div>
+
+ 
+
+    </div>
+
+ 
+
+    <div class="contenidoPedidoMesa">
+
+ 
+
+      <!-- PANEL DEL MENÚ -->
+
+      <section class="panelMenuTemporal">
+
+ 
+
+        <div class="tituloPanelPedido">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Menú</span>
+
+ 
+
+            <h2>
+
+              Platillos y bebidas
+
+            </h2>
+
+ 
+
+          </div>
+
+ 
+
+        </div>
+
+ 
+
+        <div
+
+          id="contenedorMenu"
+
+          class="menuPendiente"
+
+        >
+
+          <p class="cargandoMenu">
+
+            Cargando menú...
+
+          </p>
+
+        </div>
+
+ 
+
+      </section>
+
+ 
+
+      <!-- PANEL DEL COMENSAL -->
+
+      <section class="panelPedidoComensal">
+
+ 
+
+        <div class="tituloPanelPedido">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Consumo actual</span>
+
+ 
+
+            <h2 id="tituloComensalActivo">
+
+              Comensal 1
+
+            </h2>
+
+ 
+
+          </div>
+
+ 
+
+        </div>
+
+ 
+
+        <div
+
+          id="listaPedidoComensal"
+
+          class="listaPedidoComensal"
+
+        ></div>
+
+ 
+
+        <div class="resumenComensal">
+
+ 
+
+          <span>
+
+            Subtotal del comensal
+
+          </span>
+
+ 
+
+          <strong id="subtotalComensal">
+
+            $0.00
+
+          </strong>
+
+ 
+
+        </div>
+
+ 
+
+      </section>
+
+ 
+
+    </div>
+
+ 
+
+    <footer class="piePedidoMesa">
+
+ 
+
+      <div>
+
+ 
+
+        <span>Total de la mesa</span>
+
+ 
+
+        <strong id="totalMesaPedido">
+
+          $0.00
+
+        </strong>
+
+ 
+
+      </div>
+
+ 
+
+      <button
+
+        id="btnEnviarCocina"
+
+        type="button"
+
+        disabled
+
+      >
+
+        Enviar a cocina
+
+      </button>
+
+ 
+
+    </footer>
+
+ 
+
+  </section>
+
+ 
+
+</section>
+
+ 
+
+</section>
+
+ 
+
+  </main>
+
+ 
+
+ 
+
+  <!-- MODAL PARA MODIFICAR OBSERVACIONES Y EXTRAS DEL PRODUCTO -->
+
+  <section
+
+    id="modalProducto"
+
+    class="modalProducto oculto"
+
+    aria-hidden="true"
+
+  >
+
+    <div
+
+      class="fondoModalProducto"
+
+      data-cerrar-modal-producto
+
+    ></div>
+
+ 
+
+    <div
+
+      class="contenidoModalProducto"
+
+      role="dialog"
+
+      aria-modal="true"
+
+      aria-labelledby="nombreProductoModal"
+
+    >
+
+      <header class="encabezadoModalProducto">
+
+        <div>
+
+          <span id="textoAccionProductoModal">Modificar producto</span>
+
+          <h2 id="nombreProductoModal">Producto</h2>
+
+        </div>
+
+ 
+
+        <button
+
+          id="btnCerrarModalProducto"
+
+          class="btnCerrarModalProducto"
+
+          type="button"
+
+          aria-label="Cerrar"
+
+        >
+
+          ✕
+
+        </button>
+
+      </header>
+
+ 
+
+      <div class="cuerpoModalProducto">
+
+        <div class="precioProductoModal">
+
+          <span>Precio unitario</span>
+
+          <strong id="precioProductoModal">$0.00</strong>
+
+        </div>
+
+ 
+
+        <section class="seccionObservacionesProducto">
+
+          <h3>Observaciones rápidas</h3>
+
+ 
+
+          <div
+
+            id="opcionesObservacionesProducto"
+
+            class="opcionesObservacionesProducto"
+
+          ></div>
+
+        </section>
+
+ 
+
+        <section id="seccionExtrasProducto" class="seccionObservacionesProducto oculto">
+
+          <h3>Extras con costo</h3>
+
+ 
+
+          <div
+
+            id="opcionesExtrasProducto"
+
+            class="opcionesObservacionesProducto"
+
+          ></div>
+
+        </section>
+
+ 
+
+        <section class="seccionNotaProducto">
+
+          <label for="notaProductoModal">
+
+            Observación adicional
+
+          </label>
+
+ 
+
+          <textarea
+
+            id="notaProductoModal"
+
+            rows="3"
+
+            maxlength="180"
+
+            placeholder="Ejemplo: servir la salsa aparte"
+
+          ></textarea>
+
+ 
+
+          <small>
+
+            Máximo 180 caracteres
+
+          </small>
+
+        </section>
+
+      </div>
+
+ 
+
+      <footer class="pieModalProducto">
+
+        <button
+
+          id="btnEliminarProducto"
+
+          class="btnEliminarProducto"
+
+          type="button"
+
+        >
+
+          Eliminar producto
+
+        </button>
+
+ 
+
+        <button
+
+          id="btnCancelarProducto"
+
+          class="btnCancelarProducto"
+
+          type="button"
+
+        >
+
+          Cancelar
+
+        </button>
+
+ 
+
+        <button
+
+          id="btnConfirmarProducto"
+
+          class="btnConfirmarProducto"
+
+          type="button"
+
+        >
+
+          Guardar cambios
+
+        </button>
+
+      </footer>
+
+    </div>
+
+  </section>
+
+ 
+
+<script src="script.js"></script>
+
+<script src="js/comensales.js"></script>
+
+<script src="js/menu.js"></script>
+
+<script src="js/mesas.js"></script>
+
+<script src="js/login.js"></script>
+
+ 
+
+<script>
+
+  inicializarMenu();
+
+</script>
+
+</body>
+
+</html>
