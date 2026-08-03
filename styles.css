@@ -1,166 +1,536 @@
 * {
 
+ 
+
+ 
+
+ 
+
   box-sizing: border-box;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 html,
 
-body {
+ 
 
-  width: 100%;
-
-  min-height: 100%;
-
-  margin: 0;
-
-}
+ 
 
  
 
 body {
 
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 100%;
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+body {
+
+ 
+
+ 
+
+ 
+
   font-family:
+
+ 
+
+ 
+
+ 
 
     Arial,
 
+ 
+
+ 
+
+ 
+
     Helvetica,
+
+ 
+
+ 
+
+ 
 
     sans-serif;
 
  
 
+ 
+
+ 
+
   background: #eef2f7;
+
+ 
+
+ 
+
+ 
 
   color: #1d2939;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 button,
 
+ 
+
+ 
+
+ 
+
 input {
+
+ 
+
+ 
+
+ 
 
   font: inherit;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 button {
 
+ 
+
+ 
+
+ 
+
   cursor: pointer;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 .oculto {
 
+ 
+
+ 
+
+ 
+
   display: none !important;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 .pantallaSistema {
 
+ 
+
+ 
+
+ 
+
   min-height: 100vh;
+
+ 
+
+ 
+
+ 
 
   background: #f4f7fb;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 .encabezadoSistema {
 
+ 
+
+ 
+
+ 
+
   min-height: 72px;
+
+ 
+
+ 
+
+ 
 
   padding: 12px 24px;
 
  
 
+ 
+
+ 
+
   display: flex;
+
+ 
+
+ 
+
+ 
 
   align-items: center;
 
+ 
+
+ 
+
+ 
+
   justify-content: space-between;
+
+ 
+
+ 
+
+ 
 
   gap: 20px;
 
  
 
+ 
+
+ 
+
   background: #111827;
+
+ 
+
+ 
+
+ 
 
   color: white;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 .encabezadoSistema strong {
 
+ 
+
+ 
+
+ 
+
   font-size: 1.35rem;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 .datosUsuario {
 
+ 
+
+ 
+
+ 
+
   display: flex;
+
+ 
+
+ 
+
+ 
 
   align-items: center;
 
+ 
+
+ 
+
+ 
+
   gap: 12px;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #rolUsuarioActivo {
 
+ 
+
+ 
+
+ 
+
   padding: 6px 10px;
+
+ 
+
+ 
+
+ 
 
   border-radius: 999px;
 
+ 
+
+ 
+
+ 
+
   background: #2563eb;
+
+ 
+
+ 
+
+ 
 
   font-size: 0.85rem;
 
+ 
+
+ 
+
+ 
+
   text-transform: capitalize;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #btnCerrarSesion {
 
+ 
+
+ 
+
+ 
+
   padding: 9px 14px;
+
+ 
+
+ 
+
+ 
 
   border: 1px solid #ef4444;
 
+ 
+
+ 
+
+ 
+
   border-radius: 8px;
+
+ 
+
+ 
+
+ 
 
   background: transparent;
 
+ 
+
+ 
+
+ 
+
   color: white;
+
+ 
+
+ 
+
+ 
 
 }
 
  
 
+ 
+
+ 
+
 .contenidoTemporal {
+
+ 
+
+ 
+
+ 
 
   padding: 40px 24px;
 
+ 
+
+ 
+
+ 
+
   text-align: center;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
@@ -168,115 +538,351 @@ button {
 
  
 
+ 
+
+ 
+
   .encabezadoSistema {
+
+ 
+
+ 
+
+ 
 
     padding: 10px 12px;
 
+ 
+
+ 
+
+ 
+
   }
+
+ 
+
+ 
 
  
 
   .datosUsuario {
 
+ 
+
+ 
+
+ 
+
     gap: 7px;
 
+ 
+
+ 
+
+ 
+
   }
+
+ 
+
+ 
 
  
 
   #nombreUsuarioActivo {
 
+ 
+
+ 
+
+ 
+
     display: none;
+
+ 
+
+ 
+
+ 
 
   }
 
  
 
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 /* =========================================
 
+ 
+
+ 
+
+ 
+
    MODAL PARA MODIFICAR PRODUCTOS
+
+ 
+
+ 
+
+ 
 
    ========================================= */
 
  
 
+ 
+
+ 
+
 body.modalAbierto {
+
+ 
+
+ 
+
+ 
 
   overflow: hidden;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto {
 
+ 
+
+ 
+
+ 
+
   position: fixed;
 
+ 
+
+ 
+
+ 
+
   inset: 0;
+
+ 
+
+ 
+
+ 
 
   z-index: 9999;
 
  
 
+ 
+
+ 
+
   display: flex;
 
+ 
+
+ 
+
+ 
+
   align-items: center;
+
+ 
+
+ 
+
+ 
 
   justify-content: center;
 
  
 
+ 
+
+ 
+
   padding: 20px;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto::before {
 
+ 
+
+ 
+
+ 
+
   content: "";
 
+ 
+
+ 
+
+ 
+
   position: absolute;
+
+ 
+
+ 
+
+ 
 
   inset: 0;
 
  
 
+ 
+
+ 
+
   background: rgba(15, 23, 42, 0.72);
+
+ 
+
+ 
+
+ 
 
   backdrop-filter: blur(2px);
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto > * {
 
+ 
+
+ 
+
+ 
+
   position: relative;
 
+ 
+
+ 
+
+ 
+
   z-index: 1;
+
+ 
+
+ 
+
+ 
 
 }
 
  
 
+ 
+
+ 
+
 #modalProducto .contenidoModal,
+
+ 
+
+ 
+
+ 
 
 #modalProducto .modalContenido,
 
+ 
+
+ 
+
+ 
+
 #modalProducto .tarjetaModal,
+
+ 
+
+ 
+
+ 
 
 #modalProducto > div:not([data-cerrar-modal-producto]) {
 
+ 
+
+ 
+
+ 
+
   width: min(520px, 100%);
+
+ 
+
+ 
+
+ 
 
   max-height: calc(100vh - 40px);
 
+ 
+
+ 
+
+ 
+
   overflow-y: auto;
+
+ 
+
+ 
 
  
 
@@ -284,55 +890,167 @@ body.modalAbierto {
 
  
 
+ 
+
+ 
+
   border-radius: 16px;
+
+ 
+
+ 
+
+ 
 
   border: 1px solid #d0d5dd;
 
  
 
+ 
+
+ 
+
   background: white;
+
+ 
+
+ 
+
+ 
 
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto [data-cerrar-modal-producto] {
 
+ 
+
+ 
+
+ 
+
   position: absolute;
+
+ 
+
+ 
+
+ 
 
   inset: 0;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto h2,
 
+ 
+
+ 
+
+ 
+
 #modalProducto h3 {
+
+ 
+
+ 
+
+ 
 
   margin-top: 0;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto label {
 
+ 
+
+ 
+
+ 
+
   display: block;
 
+ 
+
+ 
+
+ 
+
   margin-bottom: 8px;
+
+ 
+
+ 
+
+ 
 
 }
 
  
 
+ 
+
+ 
+
 #modalProducto textarea {
+
+ 
+
+ 
+
+ 
 
   width: 100%;
 
+ 
+
+ 
+
+ 
+
   min-height: 90px;
+
+ 
+
+ 
 
  
 
@@ -340,153 +1058,471 @@ body.modalAbierto {
 
  
 
+ 
+
+ 
+
   border: 1px solid #d0d5dd;
 
+ 
+
+ 
+
+ 
+
   border-radius: 8px;
+
+ 
+
+ 
 
  
 
   resize: vertical;
 
+ 
+
+ 
+
+ 
+
   font: inherit;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto .opcionObservacionProducto {
 
+ 
+
+ 
+
+ 
+
   display: flex;
 
+ 
+
+ 
+
+ 
+
   align-items: center;
+
+ 
+
+ 
+
+ 
 
   gap: 8px;
 
  
 
+ 
+
+ 
+
   margin-bottom: 8px;
+
+ 
+
+ 
+
+ 
 
   padding: 8px 10px;
 
  
 
+ 
+
+ 
+
   border: 1px solid #e4e7ec;
 
+ 
+
+ 
+
+ 
+
   border-radius: 8px;
+
+ 
+
+ 
 
  
 
   background: #f9fafb;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto .opcionObservacionProducto input {
 
+ 
+
+ 
+
+ 
+
   width: 18px;
+
+ 
+
+ 
+
+ 
 
   height: 18px;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto button {
 
+ 
+
+ 
+
+ 
+
   min-height: 40px;
+
+ 
+
+ 
+
+ 
 
   padding: 9px 14px;
 
  
 
+ 
+
+ 
+
   border: 0;
+
+ 
+
+ 
+
+ 
 
   border-radius: 8px;
 
  
 
+ 
+
+ 
+
   font-weight: 700;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #btnConfirmarProducto {
 
+ 
+
+ 
+
+ 
+
   background: #16a34a;
+
+ 
+
+ 
+
+ 
 
   color: white;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #btnCancelarProducto,
 
+ 
+
+ 
+
+ 
+
 #btnCerrarModalProducto {
+
+ 
+
+ 
+
+ 
 
   background: #e5e7eb;
 
+ 
+
+ 
+
+ 
+
   color: #111827;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #btnEliminarProducto {
 
+ 
+
+ 
+
+ 
+
   background: #dc2626;
+
+ 
+
+ 
+
+ 
 
   color: white;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #modalProducto .accionesModal,
 
+ 
+
+ 
+
+ 
+
 #modalProducto .botonesModal {
+
+ 
+
+ 
+
+ 
 
   display: flex;
 
+ 
+
+ 
+
+ 
+
   flex-wrap: wrap;
 
+ 
+
+ 
+
+ 
+
   justify-content: flex-end;
+
+ 
+
+ 
+
+ 
 
   gap: 10px;
 
  
 
+ 
+
+ 
+
   margin-top: 18px;
+
+ 
+
+ 
+
+ 
 
 }
 
  
 
+ 
+
+ 
+
 @media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
 
   #modalProducto {
 
+ 
+
+ 
+
+ 
+
     padding: 12px;
 
+ 
+
+ 
+
+ 
+
     align-items: flex-end;
+
+ 
+
+ 
+
+ 
 
   }
 
  
 
+ 
+
+ 
+
   #modalProducto .contenidoModal,
+
+ 
+
+ 
+
+ 
 
   #modalProducto .modalContenido,
 
+ 
+
+ 
+
+ 
+
   #modalProducto .tarjetaModal,
+
+ 
+
+ 
+
+ 
 
   #modalProducto > div:not([data-cerrar-modal-producto]) {
 
+ 
+
+ 
+
+ 
+
     width: 100%;
 
+ 
+
+ 
+
+ 
+
     max-height: 88vh;
+
+ 
+
+ 
 
  
 
@@ -494,75 +1530,9037 @@ body.modalAbierto {
 
  
 
+ 
+
+ 
+
     border-radius: 16px 16px 0 0;
 
+ 
+
+ 
+
+ 
+
   }
+
+ 
+
+ 
 
  
 
   #modalProducto .accionesModal,
 
+ 
+
+ 
+
+ 
+
   #modalProducto .botonesModal {
+
+ 
+
+ 
+
+ 
 
     flex-direction: column;
 
+ 
+
+ 
+
+ 
+
   }
+
+ 
+
+ 
 
  
 
   #modalProducto button {
 
+ 
+
+ 
+
+ 
+
     width: 100%;
+
+ 
+
+ 
+
+ 
 
   }
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 /* =========================================
 
+ 
+
+ 
+
+ 
+
    MENÚ IZQUIERDO EN RECTÁNGULOS
+
+ 
+
+ 
+
+ 
 
    ========================================= */
 
  
 
+ 
+
+ 
+
 #contenedorMenu {
+
+ 
+
+ 
+
+ 
 
   display: grid;
 
+ 
+
+ 
+
+ 
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+ 
+
+ 
+
+ 
 
   gap: 14px;
 
  
 
+ 
+
+ 
+
   padding: 18px;
 
+ 
+
+ 
+
+ 
+
 }
+
+ 
+
+ 
 
  
 
 #contenedorMenu > .categoriaMenu:first-child {
 
+ 
+
+ 
+
+ 
+
   grid-column: 1 / -1;
 
+ 
+
+ 
+
+ 
+
   justify-self: start;
+
+ 
+
+ 
+
+ 
 
 }
 
  
 
+ 
+
+ 
+
 .categoriaMenu {
 
+ 
+
+ 
+
+ 
+
   min-height: 42px;
+
+ 
+
+ 
+
+ 
 
   padding: 9px 14px;
 
  
 
+ 
+
+ 
+
   border: 1px solid #cfd4dc;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.categoriaMenu:hover {
+
+ 
+
+ 
+
+ 
+
+  transform: translateY(-1px);
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.12);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto {
+
+ 
+
+ 
+
+ 
+
+  min-height: 126px;
+
+ 
+
+ 
+
+ 
+
+  padding: 16px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  align-items: stretch;
+
+ 
+
+ 
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+ 
+
+ 
+
+  gap: 10px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d7dce3;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 12px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.09);
+
+ 
+
+ 
+
+ 
+
+  text-align: left;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto h3 {
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1.05rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.25;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto p {
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #475467;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto button {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 38px;
+
+ 
+
+ 
+
+ 
+
+  padding: 8px 12px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #98a2b3;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto button:hover {
+
+ 
+
+ 
+
+ 
+
+  background: #f2f4f7;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto:focus-within {
+
+ 
+
+ 
+
+ 
+
+  outline: 2px solid #667085;
+
+ 
+
+ 
+
+ 
+
+  outline-offset: 2px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  #contenedorMenu {
+
+ 
+
+ 
+
+ 
+
+    grid-template-columns: 1fr;
+
+ 
+
+ 
+
+ 
+
+    gap: 10px;
+
+ 
+
+ 
+
+ 
+
+    padding: 12px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .tarjetaProducto {
+
+ 
+
+ 
+
+ 
+
+    min-height: 110px;
+
+ 
+
+ 
+
+ 
+
+    padding: 14px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   AJUSTE DE CATEGORÍAS DEL MENÚ
+
+ 
+
+ 
+
+ 
+
+   Todos los rectángulos conservan el mismo tamaño
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu > .categoriaMenu:first-child {
+
+ 
+
+ 
+
+ 
+
+  grid-column: auto;
+
+ 
+
+ 
+
+ 
+
+  justify-self: stretch;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu .categoriaMenu {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 48px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: center;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   PRODUCTOS DEL PEDIDO EN RECTÁNGULOS
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+#listaPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  gap: 10px;
+
+ 
+
+ 
+
+ 
+
+  padding: 12px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 68px;
+
+ 
+
+ 
+
+ 
+
+  padding: 12px 14px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+ 
+
+ 
+
+  gap: 14px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.07);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div {
+
+ 
+
+ 
+
+ 
+
+  min-width: 0;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  gap: 4px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div strong {
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.2;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div span {
+
+ 
+
+ 
+
+ 
+
+  color: #667085;
+
+ 
+
+ 
+
+ 
+
+  font-size: 0.88rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.3;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > strong {
+
+ 
+
+ 
+
+ 
+
+  flex-shrink: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  white-space: nowrap;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* Producto pendiente: permanece blanco y se puede modificar. */
+
+ 
+
+ 
+
+ 
+
+.productoCapturado {
+
+ 
+
+ 
+
+ 
+
+  cursor: pointer;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* Producto enviado: gris claro y bloqueado. */
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina {
+
+ 
+
+ 
+
+ 
+
+  background: #eeeeee;
+
+ 
+
+ 
+
+ 
+
+  border-color: #c9cdd3;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: none;
+
+ 
+
+ 
+
+ 
+
+  cursor: default;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > div strong,
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > div span,
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > strong {
+
+ 
+
+ 
+
+ 
+
+  color: #666666;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoCapturado:hover {
+
+ 
+
+ 
+
+ 
+
+  border-color: #98a2b3;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.1);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.pedidoVacio {
+
+ 
+
+ 
+
+ 
+
+  padding: 30px 18px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  gap: 8px;
+
+ 
+
+ 
+
+ 
+
+  text-align: center;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  .productoPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+    align-items: flex-start;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .productoPedidoComensal > strong {
+
+ 
+
+ 
+
+ 
+
+    padding-top: 2px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+   PANTALLA DE COCINA PARA TABLET Y COMPUTADORA
+
+ 
+
+   ========================================= */
+
+ 
+
+.pantallaCocina { min-height: calc(100vh - 72px); padding: 22px; background: #f3f4f6; }
+
+ 
+
+.encabezadoCocina, .barraHistoricoCocina { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+
+ 
+
+.encabezadoCocina h1, .barraHistoricoCocina h2 { margin: 4px 0 0; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+
+ 
+
+.etiquetaCocina, .barraHistoricoCocina span { color: #667085; font-weight: 700; }
+
+ 
+
+.btnHistoricoCocina, .btnVolverCocina { min-height: 52px; padding: 12px 20px; border: 0; border-radius: 12px; background: #1f2937; color: white; font-weight: 800; }
+
+ 
+
+.vistaCocina { width: 100%; }
+
+ 
+
+.contenedorTarjetasCocina { display: flex; align-items: flex-start; gap: 18px; width: 100%; min-height: 420px; padding: 4px 4px 18px; overflow-x: auto; scroll-snap-type: x proximity; }
+
+ 
+
+.tarjetaCocina { flex: 0 0 min(340px, 86vw); min-height: 410px; padding: 18px; display: flex; flex-direction: column; border: 5px solid #2563eb; border-radius: 18px; background: white; box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12); scroll-snap-align: start; }
+
+ 
+
+.tarjetaNuevaCocina { border-color: #2563eb; }
+
+ 
+
+.tarjetaPreparandoCocina { border-color: #f4c430; }
+
+ 
+
+.tarjetaRetrasadaCocina { border-color: #dc2626; }
+
+ 
+
+.tarjetaTerminadaCocina { min-height: 340px; border-color: #16a34a; background: #f0fdf4; }
+
+ 
+
+.cabeceraTarjetaCocina { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 2px solid #e5e7eb; }
+
+ 
+
+.cabeceraTarjetaCocina > div { display: flex; flex-direction: column; gap: 4px; }
+
+ 
+
+.cabeceraTarjetaCocina strong { font-size: 1.65rem; }
+
+ 
+
+.cabeceraTarjetaCocina span, .cabeceraTarjetaCocina time { color: #475467; font-size: 1.05rem; font-weight: 700; }
+
+ 
+
+.listaPlatillosCocina { flex: 1; margin: 0; padding: 18px 0 18px 22px; }
+
+ 
+
+.platilloTarjetaCocina { margin-bottom: 18px; }
+
+ 
+
+.platilloTarjetaCocina strong, .platilloTarjetaCocina span { display: block; }
+
+ 
+
+.platilloTarjetaCocina strong { font-size: 1.35rem; line-height: 1.25; }
+
+ 
+
+.platilloTarjetaCocina span { margin-top: 6px; color: #7c2d12; font-size: 1.03rem; font-weight: 800; line-height: 1.35; }
+
+ 
+
+.pieTarjetaCocina { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
+
+ 
+
+.estadoTextoCocina { text-align: center; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.04em; }
+
+ 
+
+.btnAccionCocina { width: 100%; min-height: 64px; padding: 12px; border: 0; border-radius: 13px; background: #111827; color: white; font-size: 1.15rem; font-weight: 900; }
+
+ 
+
+.btnAccionCocina:active { transform: scale(0.98); }
+
+ 
+
+.pieHistoricoCocina { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 2px solid #bbf7d0; }
+
+ 
+
+.pieHistoricoCocina span { color: #166534; font-weight: 800; }
+
+ 
+
+.pieHistoricoCocina strong { font-size: 1.15rem; }
+
+ 
+
+.mensajeCocinaVacia { width: 100%; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #475467; }
+
+ 
+
+.mensajeCocinaVacia > span { font-size: 3rem; }
+
+ 
+
+.mensajeCocinaVacia strong { margin-top: 12px; font-size: 1.45rem; color: #1d2939; }
+
+ 
+
+.mensajeCocinaVacia p { margin: 7px 0 0; }
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+  .pantallaCocina { min-height: calc(100vh - 64px); padding: 14px; }
+
+ 
+
+  .encabezadoCocina, .barraHistoricoCocina { align-items: stretch; flex-direction: column; }
+
+ 
+
+  .btnHistoricoCocina, .btnVolverCocina { width: 100%; }
+
+ 
+
+  .tarjetaCocina { flex-basis: 88vw; }
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+* {
+
+ 
+
+ 
+
+ 
+
+  box-sizing: border-box;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+html,
+
+ 
+
+ 
+
+ 
+
+body {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 100%;
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+body {
+
+ 
+
+ 
+
+ 
+
+  font-family:
+
+ 
+
+ 
+
+ 
+
+    Arial,
+
+ 
+
+ 
+
+ 
+
+    Helvetica,
+
+ 
+
+ 
+
+ 
+
+    sans-serif;
+
+ 
+
+ 
+
+ 
+
+  background: #eef2f7;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+button,
+
+ 
+
+ 
+
+ 
+
+input {
+
+ 
+
+ 
+
+ 
+
+  font: inherit;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+button {
+
+ 
+
+ 
+
+ 
+
+  cursor: pointer;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.oculto {
+
+ 
+
+ 
+
+ 
+
+  display: none !important;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.pantallaSistema {
+
+ 
+
+ 
+
+ 
+
+  min-height: 100vh;
+
+ 
+
+ 
+
+ 
+
+  background: #f4f7fb;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoSistema {
+
+ 
+
+ 
+
+ 
+
+  min-height: 72px;
+
+ 
+
+ 
+
+ 
+
+  padding: 12px 24px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+ 
+
+ 
+
+  gap: 20px;
+
+ 
+
+ 
+
+ 
+
+  background: #111827;
+
+ 
+
+ 
+
+ 
+
+  color: white;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoSistema strong {
+
+ 
+
+ 
+
+ 
+
+  font-size: 1.35rem;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.datosUsuario {
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  gap: 12px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#rolUsuarioActivo {
+
+ 
+
+ 
+
+ 
+
+  padding: 6px 10px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 999px;
+
+ 
+
+ 
+
+ 
+
+  background: #2563eb;
+
+ 
+
+ 
+
+ 
+
+  font-size: 0.85rem;
+
+ 
+
+ 
+
+ 
+
+  text-transform: capitalize;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnCerrarSesion {
+
+ 
+
+ 
+
+ 
+
+  padding: 9px 14px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #ef4444;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: transparent;
+
+ 
+
+ 
+
+ 
+
+  color: white;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contenidoTemporal {
+
+ 
+
+ 
+
+ 
+
+  padding: 40px 24px;
+
+ 
+
+ 
+
+ 
+
+  text-align: center;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  .encabezadoSistema {
+
+ 
+
+ 
+
+ 
+
+    padding: 10px 12px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .datosUsuario {
+
+ 
+
+ 
+
+ 
+
+    gap: 7px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  #nombreUsuarioActivo {
+
+ 
+
+ 
+
+ 
+
+    display: none;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   MODAL PARA MODIFICAR PRODUCTOS
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+body.modalAbierto {
+
+ 
+
+ 
+
+ 
+
+  overflow: hidden;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto {
+
+ 
+
+ 
+
+ 
+
+  position: fixed;
+
+ 
+
+ 
+
+ 
+
+  inset: 0;
+
+ 
+
+ 
+
+ 
+
+  z-index: 9999;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: center;
+
+ 
+
+ 
+
+ 
+
+  padding: 20px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto::before {
+
+ 
+
+ 
+
+ 
+
+  content: "";
+
+ 
+
+ 
+
+ 
+
+  position: absolute;
+
+ 
+
+ 
+
+ 
+
+  inset: 0;
+
+ 
+
+ 
+
+ 
+
+  background: rgba(15, 23, 42, 0.72);
+
+ 
+
+ 
+
+ 
+
+  backdrop-filter: blur(2px);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto > * {
+
+ 
+
+ 
+
+ 
+
+  position: relative;
+
+ 
+
+ 
+
+ 
+
+  z-index: 1;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto .contenidoModal,
+
+ 
+
+ 
+
+ 
+
+#modalProducto .modalContenido,
+
+ 
+
+ 
+
+ 
+
+#modalProducto .tarjetaModal,
+
+ 
+
+ 
+
+ 
+
+#modalProducto > div:not([data-cerrar-modal-producto]) {
+
+ 
+
+ 
+
+ 
+
+  width: min(520px, 100%);
+
+ 
+
+ 
+
+ 
+
+  max-height: calc(100vh - 40px);
+
+ 
+
+ 
+
+ 
+
+  overflow-y: auto;
+
+ 
+
+ 
+
+ 
+
+  padding: 24px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 16px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+ 
+
+ 
+
+  background: white;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto [data-cerrar-modal-producto] {
+
+ 
+
+ 
+
+ 
+
+  position: absolute;
+
+ 
+
+ 
+
+ 
+
+  inset: 0;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto h2,
+
+ 
+
+ 
+
+ 
+
+#modalProducto h3 {
+
+ 
+
+ 
+
+ 
+
+  margin-top: 0;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto label {
+
+ 
+
+ 
+
+ 
+
+  display: block;
+
+ 
+
+ 
+
+ 
+
+  margin-bottom: 8px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto textarea {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 90px;
+
+ 
+
+ 
+
+ 
+
+  padding: 10px 12px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  resize: vertical;
+
+ 
+
+ 
+
+ 
+
+  font: inherit;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto .opcionObservacionProducto {
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  gap: 8px;
+
+ 
+
+ 
+
+ 
+
+  margin-bottom: 8px;
+
+ 
+
+ 
+
+ 
+
+  padding: 8px 10px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #e4e7ec;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: #f9fafb;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto .opcionObservacionProducto input {
+
+ 
+
+ 
+
+ 
+
+  width: 18px;
+
+ 
+
+ 
+
+ 
+
+  height: 18px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto button {
+
+ 
+
+ 
+
+ 
+
+  min-height: 40px;
+
+ 
+
+ 
+
+ 
+
+  padding: 9px 14px;
+
+ 
+
+ 
+
+ 
+
+  border: 0;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnConfirmarProducto {
+
+ 
+
+ 
+
+ 
+
+  background: #16a34a;
+
+ 
+
+ 
+
+ 
+
+  color: white;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnCancelarProducto,
+
+ 
+
+ 
+
+ 
+
+#btnCerrarModalProducto {
+
+ 
+
+ 
+
+ 
+
+  background: #e5e7eb;
+
+ 
+
+ 
+
+ 
+
+  color: #111827;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnEliminarProducto {
+
+ 
+
+ 
+
+ 
+
+  background: #dc2626;
+
+ 
+
+ 
+
+ 
+
+  color: white;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#modalProducto .accionesModal,
+
+ 
+
+ 
+
+ 
+
+#modalProducto .botonesModal {
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-wrap: wrap;
+
+ 
+
+ 
+
+ 
+
+  justify-content: flex-end;
+
+ 
+
+ 
+
+ 
+
+  gap: 10px;
+
+ 
+
+ 
+
+ 
+
+  margin-top: 18px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  #modalProducto {
+
+ 
+
+ 
+
+ 
+
+    padding: 12px;
+
+ 
+
+ 
+
+ 
+
+    align-items: flex-end;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  #modalProducto .contenidoModal,
+
+ 
+
+ 
+
+ 
+
+  #modalProducto .modalContenido,
+
+ 
+
+ 
+
+ 
+
+  #modalProducto .tarjetaModal,
+
+ 
+
+ 
+
+ 
+
+  #modalProducto > div:not([data-cerrar-modal-producto]) {
+
+ 
+
+ 
+
+ 
+
+    width: 100%;
+
+ 
+
+ 
+
+ 
+
+    max-height: 88vh;
+
+ 
+
+ 
+
+ 
+
+    padding: 18px;
+
+ 
+
+ 
+
+ 
+
+    border-radius: 16px 16px 0 0;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  #modalProducto .accionesModal,
+
+ 
+
+ 
+
+ 
+
+  #modalProducto .botonesModal {
+
+ 
+
+ 
+
+ 
+
+    flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  #modalProducto button {
+
+ 
+
+ 
+
+ 
+
+    width: 100%;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   MENÚ IZQUIERDO EN RECTÁNGULOS
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu {
+
+ 
+
+ 
+
+ 
+
+  display: grid;
+
+ 
+
+ 
+
+ 
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+ 
+
+ 
+
+ 
+
+  gap: 14px;
+
+ 
+
+ 
+
+ 
+
+  padding: 18px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu > .categoriaMenu:first-child {
+
+ 
+
+ 
+
+ 
+
+  grid-column: 1 / -1;
+
+ 
+
+ 
+
+ 
+
+  justify-self: start;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.categoriaMenu {
+
+ 
+
+ 
+
+ 
+
+  min-height: 42px;
+
+ 
+
+ 
+
+ 
+
+  padding: 9px 14px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #cfd4dc;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.categoriaMenu:hover {
+
+ 
+
+ 
+
+ 
+
+  transform: translateY(-1px);
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.12);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto {
+
+ 
+
+ 
+
+ 
+
+  min-height: 126px;
+
+ 
+
+ 
+
+ 
+
+  padding: 16px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  align-items: stretch;
+
+ 
+
+ 
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+ 
+
+ 
+
+  gap: 10px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d7dce3;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 12px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.09);
+
+ 
+
+ 
+
+ 
+
+  text-align: left;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto h3 {
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1.05rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.25;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto p {
+
+ 
+
+ 
+
+ 
+
+  margin: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #475467;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto button {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 38px;
+
+ 
+
+ 
+
+ 
+
+  padding: 8px 12px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #98a2b3;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 700;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto button:hover {
+
+ 
+
+ 
+
+ 
+
+  background: #f2f4f7;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaProducto:focus-within {
+
+ 
+
+ 
+
+ 
+
+  outline: 2px solid #667085;
+
+ 
+
+ 
+
+ 
+
+  outline-offset: 2px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  #contenedorMenu {
+
+ 
+
+ 
+
+ 
+
+    grid-template-columns: 1fr;
+
+ 
+
+ 
+
+ 
+
+    gap: 10px;
+
+ 
+
+ 
+
+ 
+
+    padding: 12px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .tarjetaProducto {
+
+ 
+
+ 
+
+ 
+
+    min-height: 110px;
+
+ 
+
+ 
+
+ 
+
+    padding: 14px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   AJUSTE DE CATEGORÍAS DEL MENÚ
+
+ 
+
+ 
+
+ 
+
+   Todos los rectángulos conservan el mismo tamaño
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu > .categoriaMenu:first-child {
+
+ 
+
+ 
+
+ 
+
+  grid-column: auto;
+
+ 
+
+ 
+
+ 
+
+  justify-self: stretch;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#contenedorMenu .categoriaMenu {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 48px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: center;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   PRODUCTOS DEL PEDIDO EN RECTÁNGULOS
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+#listaPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  gap: 10px;
+
+ 
+
+ 
+
+ 
+
+  padding: 12px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+  width: 100%;
+
+ 
+
+ 
+
+ 
+
+  min-height: 68px;
+
+ 
+
+ 
+
+ 
+
+  padding: 12px 14px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+ 
+
+ 
+
+  gap: 14px;
+
+ 
+
+ 
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.07);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div {
+
+ 
+
+ 
+
+ 
+
+  min-width: 0;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  gap: 4px;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div strong {
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.2;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > div span {
+
+ 
+
+ 
+
+ 
+
+  color: #667085;
+
+ 
+
+ 
+
+ 
+
+  font-size: 0.88rem;
+
+ 
+
+ 
+
+ 
+
+  line-height: 1.3;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoPedidoComensal > strong {
+
+ 
+
+ 
+
+ 
+
+  flex-shrink: 0;
+
+ 
+
+ 
+
+ 
+
+  color: #1d2939;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+ 
+
+ 
+
+  white-space: nowrap;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* Producto pendiente: permanece blanco y se puede modificar. */
+
+ 
+
+ 
+
+ 
+
+.productoCapturado {
+
+ 
+
+ 
+
+ 
+
+  cursor: pointer;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* Producto enviado: gris claro y bloqueado. */
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina {
+
+ 
+
+ 
+
+ 
+
+  background: #eeeeee;
+
+ 
+
+ 
+
+ 
+
+  border-color: #c9cdd3;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: none;
+
+ 
+
+ 
+
+ 
+
+  cursor: default;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > div strong,
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > div span,
+
+ 
+
+ 
+
+ 
+
+.productoEnviadoCocina > strong {
+
+ 
+
+ 
+
+ 
+
+  color: #666666;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.productoCapturado:hover {
+
+ 
+
+ 
+
+ 
+
+  border-color: #98a2b3;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.1);
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.pedidoVacio {
+
+ 
+
+ 
+
+ 
+
+  padding: 30px 18px;
+
+ 
+
+ 
+
+ 
+
+  display: flex;
+
+ 
+
+ 
+
+ 
+
+  flex-direction: column;
+
+ 
+
+ 
+
+ 
+
+  align-items: center;
+
+ 
+
+ 
+
+ 
+
+  gap: 8px;
+
+ 
+
+ 
+
+ 
+
+  text-align: center;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  .productoPedidoComensal {
+
+ 
+
+ 
+
+ 
+
+    align-items: flex-start;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .productoPedidoComensal > strong {
+
+ 
+
+ 
+
+ 
+
+    padding-top: 2px;
+
+ 
+
+ 
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   PANTALLA DE COCINA PARA TABLET Y COMPUTADORA
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+.pantallaCocina { min-height: calc(100vh - 72px); padding: 22px; background: #f3f4f6; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoCocina, .barraHistoricoCocina { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoCocina h1, .barraHistoricoCocina h2 { margin: 4px 0 0; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+
+ 
+
+ 
+
+ 
+
+.etiquetaCocina, .barraHistoricoCocina span { color: #667085; font-weight: 700; }
+
+ 
+
+ 
+
+ 
+
+.btnHistoricoCocina, .btnVolverCocina { min-height: 52px; padding: 12px 20px; border: 0; border-radius: 12px; background: #1f2937; color: white; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.vistaCocina { width: 100%; }
+
+ 
+
+ 
+
+ 
+
+.contenedorTarjetasCocina { display: flex; align-items: flex-start; gap: 18px; width: 100%; min-height: 420px; padding: 4px 4px 18px; overflow-x: auto; scroll-snap-type: x proximity; }
+
+ 
+
+ 
+
+ 
+
+.tarjetaCocina { flex: 0 0 min(340px, 86vw); min-height: 410px; padding: 18px; display: flex; flex-direction: column; border: 5px solid #2563eb; border-radius: 18px; background: white; box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12); scroll-snap-align: start; }
+
+ 
+
+ 
+
+ 
+
+.tarjetaNuevaCocina { border-color: #2563eb; }
+
+ 
+
+ 
+
+ 
+
+.tarjetaPreparandoCocina { border-color: #f4c430; }
+
+ 
+
+ 
+
+ 
+
+.tarjetaRetrasadaCocina { border-color: #dc2626; }
+
+ 
+
+ 
+
+ 
+
+.tarjetaTerminadaCocina { min-height: 340px; border-color: #16a34a; background: #f0fdf4; }
+
+ 
+
+ 
+
+ 
+
+.cabeceraTarjetaCocina { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 2px solid #e5e7eb; }
+
+ 
+
+ 
+
+ 
+
+.cabeceraTarjetaCocina > div { display: flex; flex-direction: column; gap: 4px; }
+
+ 
+
+ 
+
+ 
+
+.cabeceraTarjetaCocina strong { font-size: 1.65rem; }
+
+ 
+
+ 
+
+ 
+
+.cabeceraTarjetaCocina span, .cabeceraTarjetaCocina time { color: #475467; font-size: 1.05rem; font-weight: 700; }
+
+ 
+
+ 
+
+ 
+
+.listaPlatillosCocina { flex: 1; margin: 0; padding: 18px 0 18px 22px; }
+
+ 
+
+ 
+
+ 
+
+.platilloTarjetaCocina { margin-bottom: 18px; }
+
+ 
+
+ 
+
+ 
+
+.platilloTarjetaCocina strong, .platilloTarjetaCocina span { display: block; }
+
+ 
+
+ 
+
+ 
+
+.platilloTarjetaCocina strong { font-size: 1.35rem; line-height: 1.25; }
+
+ 
+
+ 
+
+ 
+
+.platilloTarjetaCocina span { margin-top: 6px; color: #7c2d12; font-size: 1.03rem; font-weight: 800; line-height: 1.35; }
+
+ 
+
+ 
+
+ 
+
+.pieTarjetaCocina { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
+
+ 
+
+ 
+
+ 
+
+.estadoTextoCocina { text-align: center; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.04em; }
+
+ 
+
+ 
+
+ 
+
+.btnAccionCocina { width: 100%; min-height: 64px; padding: 12px; border: 0; border-radius: 13px; background: #111827; color: white; font-size: 1.15rem; font-weight: 900; }
+
+ 
+
+ 
+
+ 
+
+.btnAccionCocina:active { transform: scale(0.98); }
+
+ 
+
+ 
+
+ 
+
+.pieHistoricoCocina { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 2px solid #bbf7d0; }
+
+ 
+
+ 
+
+ 
+
+.pieHistoricoCocina span { color: #166534; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.pieHistoricoCocina strong { font-size: 1.15rem; }
+
+ 
+
+ 
+
+ 
+
+.mensajeCocinaVacia { width: 100%; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #475467; }
+
+ 
+
+ 
+
+ 
+
+.mensajeCocinaVacia > span { font-size: 3rem; }
+
+ 
+
+ 
+
+ 
+
+.mensajeCocinaVacia strong { margin-top: 12px; font-size: 1.45rem; color: #1d2939; }
+
+ 
+
+ 
+
+ 
+
+.mensajeCocinaVacia p { margin: 7px 0 0; }
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  .pantallaCocina { min-height: calc(100vh - 64px); padding: 14px; }
+
+ 
+
+ 
+
+ 
+
+  .encabezadoCocina, .barraHistoricoCocina { align-items: stretch; flex-direction: column; }
+
+ 
+
+ 
+
+ 
+
+  .btnHistoricoCocina, .btnVolverCocina { width: 100%; }
+
+ 
+
+ 
+
+ 
+
+  .tarjetaCocina { flex-basis: 88vw; }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+ 
+
+ 
+
+   ADMINISTRACIÓN DE EMPLEADOS
+
+ 
+
+ 
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+.pantallaAdmin { min-height: calc(100vh - 72px); padding: 24px; background: #f4f7fb; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoAdmin { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoAdmin h1 { margin: 4px 0 6px; font-size: clamp(1.8rem, 3vw, 2.5rem); }
+
+ 
+
+ 
+
+ 
+
+.encabezadoAdmin p { margin: 0; color: #667085; }
+
+ 
+
+ 
+
+ 
+
+.etiquetaAdmin { color: #2563eb; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.btnNuevoEmpleado { min-height: 50px; padding: 12px 20px; border: 0; border-radius: 12px; background: #16a34a; color: white; font-weight: 800; box-shadow: 0 5px 12px rgba(22, 163, 74, 0.22); }
+
+ 
+
+ 
+
+ 
+
+.panelEmpleados { overflow: hidden; border: 1px solid #d0d5dd; border-radius: 16px; background: white; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+
+ 
+
+ 
+
+ 
+
+.barraEmpleados { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px; border-bottom: 1px solid #e4e7ec; }
+
+ 
+
+ 
+
+ 
+
+.barraEmpleados > div { display: flex; flex-direction: column; gap: 4px; }
+
+ 
+
+ 
+
+ 
+
+.barraEmpleados span { color: #667085; font-size: 0.9rem; }
+
+ 
+
+ 
+
+ 
+
+.buscadorEmpleados { width: min(390px, 100%); min-height: 44px; padding: 0 12px; display: flex; align-items: center; gap: 8px; border: 1px solid #d0d5dd; border-radius: 10px; background: #f9fafb; }
+
+ 
+
+ 
+
+ 
+
+.buscadorEmpleados input { width: 100%; border: 0; outline: 0; background: transparent; }
+
+ 
+
+ 
+
+ 
+
+.tablaEmpleadosContenedor { overflow-x: auto; }
+
+ 
+
+ 
+
+ 
+
+.tablaEmpleados { width: 100%; border-collapse: collapse; min-width: 960px; }
+
+ 
+
+ 
+
+ 
+
+.tablaEmpleados th, .tablaEmpleados td { padding: 14px 16px; border-bottom: 1px solid #eaecf0; text-align: left; vertical-align: middle; }
+
+ 
+
+ 
+
+ 
+
+.tablaEmpleados th { background: #f9fafb; color: #475467; font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.03em; }
+
+ 
+
+ 
+
+ 
+
+.tablaEmpleados tbody tr:hover { background: #f8fafc; }
+
+ 
+
+ 
+
+ 
+
+.estadoEmpleado { display: inline-flex; padding: 6px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.estadoEmpleadoActivo { background: #dcfce7; color: #166534; }
+
+ 
+
+ 
+
+ 
+
+.estadoEmpleadoInactivo { background: #fee2e2; color: #991b1b; }
+
+ 
+
+ 
+
+ 
+
+.btnModificarEmpleado { min-height: 38px; padding: 8px 13px; border: 1px solid #2563eb; border-radius: 8px; background: white; color: #1d4ed8; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.filaEmpleadoInactivo td { color: #667085; background: #fafafa; }
+
+ 
+
+ 
+
+ 
+
+.mensajeTablaEmpleados { padding: 35px !important; text-align: center !important; color: #667085; }
+
+ 
+
+ 
+
+ 
+
+/* Modal de empleados: alta y modificación, sin eliminación. */
+
+ 
+
+ 
+
+ 
+
+body.modalEmpleadoAbierto { overflow: hidden; }
+
+ 
+
+ 
+
+ 
+
+.modalEmpleado { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center; padding: 20px; }
+
+ 
+
+ 
+
+ 
+
+.fondoModalEmpleado { position: absolute; inset: 0; background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(2px); }
+
+ 
+
+ 
+
+ 
+
+.contenidoModalEmpleado { position: relative; z-index: 1; width: min(720px, 100%); max-height: calc(100vh - 40px); overflow-y: auto; border-radius: 18px; background: white; box-shadow: 0 24px 70px rgba(15, 23, 42, 0.38); }
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalEmpleado { padding: 20px 22px; display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; border-bottom: 1px solid #e4e7ec; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalEmpleado span { color: #2563eb; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalEmpleado h2 { margin: 4px 0 0; }
+
+ 
+
+ 
+
+ 
+
+.btnCerrarModalEmpleado { width: 42px; height: 42px; border: 0; border-radius: 10px; background: #e5e7eb; color: #111827; font-weight: 900; }
+
+ 
+
+ 
+
+ 
+
+.formEmpleado { padding: 22px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleado { display: flex; flex-direction: column; gap: 7px; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleadoCompleto, .mensajeEmpleado, .pieModalEmpleado { grid-column: 1 / -1; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleado label { font-weight: 800; color: #344054; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleado input, .campoEmpleado select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #d0d5dd; border-radius: 9px; background: white; color: #1d2939; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleado input:focus, .campoEmpleado select:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+
+ 
+
+ 
+
+ 
+
+.campoNumeroEmpleado input { background: #f2f4f7; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.campoEmpleado small { color: #667085; }
+
+ 
+
+ 
+
+ 
+
+.campoPasswordEmpleado { display: grid; grid-template-columns: 1fr 44px; }
+
+ 
+
+ 
+
+ 
+
+.campoPasswordEmpleado input { border-radius: 9px 0 0 9px; }
+
+ 
+
+ 
+
+ 
+
+.campoPasswordEmpleado button { border: 1px solid #d0d5dd; border-left: 0; border-radius: 0 9px 9px 0; background: #f2f4f7; }
+
+ 
+
+ 
+
+ 
+
+.avisoEmpleadoProtegido { color: #b45309 !important; font-weight: 700; }
+
+ 
+
+ 
+
+ 
+
+.mensajeEmpleado { min-height: 20px; margin: 0; color: #b42318; font-weight: 700; }
+
+ 
+
+ 
+
+ 
+
+.mensajeEmpleado.exito { color: #15803d; }
+
+ 
+
+ 
+
+ 
+
+.pieModalEmpleado { display: flex; justify-content: flex-end; gap: 12px; padding-top: 5px; }
+
+ 
+
+ 
+
+ 
+
+.btnCancelarEmpleado, .btnGuardarEmpleado { min-height: 44px; padding: 10px 18px; border: 0; border-radius: 10px; font-weight: 800; }
+
+ 
+
+ 
+
+ 
+
+.btnCancelarEmpleado { background: #e5e7eb; color: #111827; }
+
+ 
+
+ 
+
+ 
+
+.btnGuardarEmpleado { background: #16a34a; color: white; }
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+ 
+
+ 
+
+  .pantallaAdmin { min-height: calc(100vh - 64px); padding: 14px; }
+
+ 
+
+ 
+
+ 
+
+  .encabezadoAdmin, .barraEmpleados { align-items: stretch; flex-direction: column; }
+
+ 
+
+ 
+
+ 
+
+  .btnNuevoEmpleado, .buscadorEmpleados { width: 100%; }
+
+ 
+
+ 
+
+ 
+
+  .modalEmpleado { padding: 0; align-items: flex-end; }
+
+ 
+
+ 
+
+ 
+
+  .contenidoModalEmpleado { max-height: 92vh; border-radius: 18px 18px 0 0; }
+
+ 
+
+ 
+
+ 
+
+  .formEmpleado { grid-template-columns: 1fr; padding: 18px; }
+
+ 
+
+ 
+
+ 
+
+  .campoEmpleadoCompleto, .mensajeEmpleado, .pieModalEmpleado { grid-column: auto; }
+
+ 
+
+ 
+
+ 
+
+  .pieModalEmpleado { flex-direction: column-reverse; }
+
+ 
+
+ 
+
+ 
+
+  .btnCancelarEmpleado, .btnGuardarEmpleado { width: 100%; }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+   PANTALLA DE CAJA
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+.pantallaCaja {
+
+ 
+
+  min-height: calc(100vh - 72px);
+
+ 
+
+  padding: 24px;
+
+ 
+
+  background: #f4f7fb;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* ENCABEZADO */
+
+ 
+
+ 
+
+ 
+
+.encabezadoCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 20px;
+
+ 
+
+ 
+
+ 
+
+  margin-bottom: 22px;
+
+ 
+
+  padding: 22px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 16px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoCaja h1 {
+
+ 
+
+  margin: 5px 0;
+
+ 
+
+  font-size: 2rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoCaja p {
+
+ 
+
+  margin: 0;
+
+ 
+
+  color: #667085;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.etiquetaCaja {
+
+ 
+
+  color: #2563eb;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+  text-transform: uppercase;
+
+ 
+
+  letter-spacing: 0.04em;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoCajaSuperior {
+
+ 
+
+  min-width: 180px;
+
+ 
+
+  padding: 14px 18px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 12px;
+
+ 
+
+ 
+
+ 
+
+  background: #fee2e2;
+
+ 
+
+  color: #991b1b;
+
+ 
+
+ 
+
+ 
+
+  text-align: center;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* TARJETAS DE RESUMEN */
+
+ 
+
+ 
+
+ 
+
+.panelCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+ 
+
+  gap: 18px;
+
+ 
+
+ 
+
+ 
+
+  margin-bottom: 22px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaCaja {
+
+ 
+
+  padding: 20px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 14px;
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaCaja h3 {
+
+ 
+
+  margin: 0 0 10px;
+
+ 
+
+ 
+
+ 
+
+  color: #667085;
+
+ 
+
+ 
+
+ 
+
+  font-size: 1rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaCaja strong {
+
+ 
+
+  color: #111827;
+
+ 
+
+  font-size: 1.8rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaTotalCaja {
+
+ 
+
+  border-color: #2563eb;
+
+ 
+
+  background: #eff6ff;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaTotalCaja strong {
+
+ 
+
+  color: #1d4ed8;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* BOTONES DE CAJA */
+
+ 
+
+ 
+
+ 
+
+.accionesCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  flex-wrap: wrap;
+
+ 
+
+  gap: 12px;
+
+ 
+
+ 
+
+ 
+
+  margin-bottom: 22px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesCaja button {
+
+ 
+
+  min-height: 48px;
+
+ 
+
+  padding: 12px 18px;
+
+ 
+
+ 
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+ 
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnAbrirCaja {
+
+ 
+
+  background: #16a34a;
+
+ 
+
+  color: white;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnEntradaCaja {
+
+ 
+
+  background: #2563eb;
+
+ 
+
+  color: white;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnSalidaCaja {
+
+ 
+
+  background: #dc2626;
+
+ 
+
+  color: white;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnMovimientosCaja {
+
+ 
+
+  background: #475467;
+
+ 
+
+  color: white;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnCerrarCaja {
+
+ 
+
+  background: #111827;
+
+ 
+
+  color: white;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesCaja button:hover {
+
+ 
+
+  transform: translateY(-1px);
+
+ 
+
+  filter: brightness(0.96);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesCaja button:disabled {
+
+ 
+
+  cursor: not-allowed;
+
+ 
+
+  opacity: 0.45;
+
+ 
+
+  transform: none;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* HISTORIAL */
+
+ 
+
+ 
+
+ 
+
+.historialCaja {
+
+ 
+
+  overflow-x: auto;
+
+ 
+
+ 
+
+ 
+
+  padding: 20px;
+
+ 
+
+ 
+
+ 
+
+  border-radius: 16px;
+
+ 
+
+ 
+
+ 
+
+  background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.historialCaja table {
+
+ 
+
+  width: 100%;
+
+ 
+
+  border-collapse: collapse;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.historialCaja th,
+
+ 
+
+.historialCaja td {
+
+ 
+
+  padding: 13px 12px;
+
+ 
+
+ 
+
+ 
+
+  border-bottom: 1px solid #e4e7ec;
+
+ 
+
+ 
+
+ 
+
+  text-align: left;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.historialCaja th {
+
+ 
+
+  background: #f9fafb;
+
+ 
+
+  color: #475467;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.historialCaja td:nth-child(3),
+
+ 
+
+.historialCaja td:nth-child(4),
+
+ 
+
+.historialCaja td:nth-child(5),
+
+ 
+
+.historialCaja th:nth-child(3),
+
+ 
+
+.historialCaja th:nth-child(4),
+
+ 
+
+.historialCaja th:nth-child(5) {
+
+ 
+
+  text-align: right;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.movimientoEntradaCaja td:first-child {
+
+ 
+
+  border-left: 5px solid #16a34a;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.movimientoSalidaCaja td:first-child {
+
+ 
+
+  border-left: 5px solid #dc2626;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.movimientoAperturaCaja td:first-child {
+
+ 
+
+  border-left: 5px solid #2563eb;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.movimientoCierreCaja td:first-child {
+
+ 
+
+  border-left: 5px solid #6b7280;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.mensajeSinMovimientosCaja {
+
+ 
+
+  padding: 30px !important;
+
+ 
+
+ 
+
+ 
+
+  color: #667085;
+
+ 
+
+ 
+
+ 
+
+  text-align: center !important;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* ADAPTACIÓN PARA PANTALLAS PEQUEÑAS */
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 1000px) {
+
+ 
+
+ 
+
+ 
+
+  .panelCaja {
+
+ 
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 650px) {
+
+ 
+
+ 
+
+ 
+
+  .pantallaCaja {
+
+ 
+
+    padding: 14px;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .encabezadoCaja {
+
+ 
+
+    align-items: stretch;
+
+ 
+
+    flex-direction: column;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .estadoCajaSuperior {
+
+ 
+
+    width: 100%;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .panelCaja {
+
+ 
+
+    grid-template-columns: 1fr;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .accionesCaja {
+
+ 
+
+    flex-direction: column;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .accionesCaja button {
+
+ 
+
+    width: 100%;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+   PEDIDOS EN CAJA Y MODAL DE COBRO
+
+ 
+
+   Los pedidos aparecen desde que se envían a cocina.
+
+ 
+
+   El estado de cocina y el estado de pago se muestran por separado.
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+.seccionMesasPendientesCaja {
+
+ 
+
+  margin: 24px;
+
+ 
+
+  padding: 22px;
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+  border-radius: 18px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoMesasPendientesCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: flex-start;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 18px;
+
+ 
+
+  margin-bottom: 20px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoMesasPendientesCaja h2 {
+
+ 
+
+  margin: 4px 0 6px;
+
+ 
+
+  color: #101828;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoMesasPendientesCaja p {
+
+ 
+
+  margin: 0;
+
+ 
+
+  color: #667085;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.etiquetaMesasPendientesCaja {
+
+ 
+
+  color: #2563eb;
+
+ 
+
+  font-size: 0.84rem;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+  letter-spacing: 0.04em;
+
+ 
+
+  text-transform: uppercase;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesMesasPendientesCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  gap: 10px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contadorMesasPendientesCaja {
+
+ 
+
+  padding: 8px 12px;
+
+ 
+
+  border-radius: 999px;
+
+ 
+
+  background: #eff6ff;
+
+ 
+
+  color: #1d4ed8;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+  white-space: nowrap;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnActualizarMesasCaja {
+
+ 
+
+  min-height: 42px;
+
+ 
+
+  padding: 9px 14px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #1f2937;
+
+ 
+
+  color: #ffffff;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contenedorMesasPendientesCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+ 
+
+  gap: 16px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaPedidoCaja {
+
+ 
+
+  padding: 18px;
+
+ 
+
+  border: 2px solid #d0d5dd;
+
+ 
+
+  border-radius: 16px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  box-shadow: 0 5px 14px rgba(15, 23, 42, 0.08);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tarjetaPedidoCaja.pedidoPagadoCaja {
+
+ 
+
+  border-color: #22c55e;
+
+ 
+
+  background: #f0fdf4;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.cabeceraPedidoCaja,
+
+ 
+
+.filaEstadoPedidoCaja,
+
+ 
+
+.piePedidoCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 12px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.cabeceraPedidoCaja {
+
+ 
+
+  padding-bottom: 13px;
+
+ 
+
+  border-bottom: 1px solid #e4e7ec;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.cabeceraPedidoCaja h3 {
+
+ 
+
+  margin: 0;
+
+ 
+
+  font-size: 1.35rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.totalPedidoCaja {
+
+ 
+
+  color: #101828;
+
+ 
+
+  font-size: 1.32rem;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+  white-space: nowrap;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.datosPedidoCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  gap: 10px;
+
+ 
+
+  margin: 15px 0;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.filaEstadoPedidoCaja span:first-child {
+
+ 
+
+  color: #667085;
+
+ 
+
+  font-weight: 700;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.insigniaEstadoCaja {
+
+ 
+
+  padding: 6px 10px;
+
+ 
+
+  border-radius: 999px;
+
+ 
+
+  font-size: 0.84rem;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoCocinaNuevo,
+
+ 
+
+.estadoCocinaPreparando {
+
+ 
+
+  background: #fef3c7;
+
+ 
+
+  color: #92400e;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoCocinaListo {
+
+ 
+
+  background: #dcfce7;
+
+ 
+
+  color: #166534;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoPagoPendiente {
+
+ 
+
+  background: #fee2e2;
+
+ 
+
+  color: #991b1b;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoPagoPagado {
+
+ 
+
+  background: #dcfce7;
+
+ 
+
+  color: #166534;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.piePedidoCaja {
+
+ 
+
+  padding-top: 13px;
+
+ 
+
+  border-top: 1px solid #e4e7ec;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnVerPedidoCaja,
+
+ 
+
+.btnCobrarPedidoCaja {
+
+ 
+
+  min-height: 44px;
+
+ 
+
+  padding: 10px 14px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnVerPedidoCaja {
+
+ 
+
+  background: #e5e7eb;
+
+ 
+
+  color: #111827;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCobrarPedidoCaja {
+
+ 
+
+  background: #16a34a;
+
+ 
+
+  color: #ffffff;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCobrarPedidoCaja:disabled {
+
+ 
+
+  cursor: default;
+
+ 
+
+  background: #bbf7d0;
+
+ 
+
+  color: #166534;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.sinMesasPendientesCaja,
+
+ 
+
+.mensajeErrorPedidosCaja {
+
+ 
+
+  grid-column: 1 / -1;
+
+ 
+
+  min-height: 190px;
+
+ 
+
+  display: flex;
+
+ 
+
+  flex-direction: column;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: center;
+
+ 
+
+  text-align: center;
+
+ 
+
+  color: #667085;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.sinMesasPendientesCaja > span,
+
+ 
+
+.mensajeErrorPedidosCaja > span {
+
+ 
+
+  font-size: 2.5rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.sinMesasPendientesCaja strong,
+
+ 
+
+.mensajeErrorPedidosCaja strong {
+
+ 
+
+  margin-top: 8px;
+
+ 
+
+  color: #344054;
+
+ 
+
+  font-size: 1.15rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.modalCobroCaja {
+
+ 
+
+  position: fixed;
+
+ 
+
+  inset: 0;
+
+ 
+
+  z-index: 10020;
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: center;
+
+ 
+
+  padding: 20px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.fondoModalCobroCaja {
+
+ 
+
+  position: absolute;
+
+ 
+
+  inset: 0;
+
+ 
+
+  background: rgba(15, 23, 42, 0.72);
+
+ 
+
+  backdrop-filter: blur(2px);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contenidoModalCobroCaja {
+
+ 
+
+  position: relative;
+
+ 
+
+  z-index: 1;
+
+ 
+
+  width: min(650px, 100%);
+
+ 
+
+  max-height: calc(100vh - 40px);
+
+ 
+
+  overflow-y: auto;
+
+ 
+
+  border-radius: 18px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.36);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalCobroCaja,
+
+ 
+
+.accionesModalCobroCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 14px;
+
+ 
+
+  padding: 18px 22px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalCobroCaja {
+
+ 
+
+  border-bottom: 1px solid #e4e7ec;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalCobroCaja span {
+
+ 
+
+  color: #667085;
+
+ 
+
+  font-weight: 700;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalCobroCaja h2 {
+
+ 
+
+  margin: 3px 0 0;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnCerrarModalCobroCaja {
+
+ 
+
+  width: 42px;
+
+ 
+
+  height: 42px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #f2f4f7;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.detalleModalCobroCaja {
+
+ 
+
+  padding: 20px 22px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.listaConsumoCaja {
+
+ 
+
+  margin: 14px 0;
+
+ 
+
+  padding: 0;
+
+ 
+
+  list-style: none;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.listaConsumoCaja li {
+
+ 
+
+  display: flex;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 15px;
+
+ 
+
+  padding: 10px 0;
+
+ 
+
+  border-bottom: 1px solid #eaecf0;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.resumenCobroCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 14px;
+
+ 
+
+  margin-top: 16px;
+
+ 
+
+  padding: 14px;
+
+ 
+
+  border-radius: 12px;
+
+ 
+
+  background: #f9fafb;
+
+ 
+
+  font-size: 1.1rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesModalCobroCaja {
+
+ 
+
+  justify-content: flex-end;
+
+ 
+
+  border-top: 1px solid #e4e7ec;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCancelarCobroCaja,
+
+ 
+
+.btnConfirmarCobroCaja {
+
+ 
+
+  min-height: 46px;
+
+ 
+
+  padding: 10px 18px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCancelarCobroCaja {
+
+ 
+
+  background: #e5e7eb;
+
+ 
+
+  color: #111827;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnConfirmarCobroCaja {
+
+ 
+
+  background: #16a34a;
+
+ 
+
+  color: #ffffff;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 700px) {
+
+ 
+
+  .seccionMesasPendientesCaja {
+
+ 
+
+    margin: 14px;
+
+ 
+
+    padding: 16px;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .encabezadoMesasPendientesCaja,
+
+ 
+
+  .accionesMesasPendientesCaja,
+
+ 
+
+  .piePedidoCaja,
+
+ 
+
+  .accionesModalCobroCaja {
+
+ 
+
+    align-items: stretch;
+
+ 
+
+    flex-direction: column;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .btnActualizarMesasCaja,
+
+ 
+
+  .btnVerPedidoCaja,
+
+ 
+
+  .btnCobrarPedidoCaja,
+
+ 
+
+  .btnCancelarCobroCaja,
+
+ 
+
+  .btnConfirmarCobroCaja {
+
+ 
+
+    width: 100%;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .modalCobroCaja {
+
+ 
+
+    align-items: flex-end;
+
+ 
+
+    padding: 0;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .contenidoModalCobroCaja {
+
+ 
+
+    max-height: 92vh;
+
+ 
+
+    border-radius: 18px 18px 0 0;
+
+ 
+
+  }
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+   CAJA - TRES BOTONES Y MODAL DE PAGO
+
+ 
+
+   ========================================= */
+
+ 
+
+.botonesOperacionCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  grid-template-columns: 1fr 1fr 44px;
+
+ 
+
+  gap: 8px;
+
+ 
+
+  align-items: stretch;
+
+ 
+
+  margin-top: 14px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.botonesOperacionCaja button {
+
+ 
+
+  min-height: 42px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  font-weight: 700;
+
+ 
+
+  cursor: pointer;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCuentaCaja { background: #198754; color: #fff; }
+
+ 
+
+.btnPagarCaja { background: #0d6efd; color: #fff; }
+
+ 
+
+.btnImprimirPagoCaja { background: #343a40; color: #fff; font-size: 18px; padding: 0; }
+
+ 
+
+.botonesOperacionCaja button:disabled { opacity: .45; cursor: not-allowed; }
+
+ 
+
+ 
+
+ 
+
+.datosPagoCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  gap: 8px;
+
+ 
+
+  padding: 0 22px 18px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.datosPagoCaja label { font-weight: 700; color: #25324a; }
+
+ 
+
+.datosPagoCaja input,
+
+ 
+
+.datosPagoCaja select {
+
+ 
+
+  width: 100%;
+
+ 
+
+  min-height: 44px;
+
+ 
+
+  border: 1px solid #cfd6e4;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  padding: 8px 10px;
+
+ 
+
+  font-size: 16px;
+
+ 
+
+  box-sizing: border-box;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.bloqueEntregaEfectivoCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  gap: 8px;
+
+ 
+
+  padding: 12px;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #f6f8fc;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.bloqueEntregaEfectivoCaja p { margin: 0; text-align: right; }
+
+ 
+
+.resumenPagoFinalCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  align-items: center;
+
+ 
+
+  padding: 13px;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #eaf4ff;
+
+ 
+
+  font-size: 17px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@media (max-width: 520px) {
+
+ 
+
+  .botonesOperacionCaja { grid-template-columns: 1fr 1fr 42px; gap: 6px; }
+
+ 
+
+  .botonesOperacionCaja button { font-size: 13px; }
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+/* =========================================
+
+ 
+
+   GASTOS DE CAJA
+
+ 
+
+   ========================================= */
+
+ 
+
+ 
+
+ 
+
+.resumenGastosCaja {
+
+ 
+
+  margin: 18px 0;
+
+ 
+
+  padding: 18px;
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 18px;
+
+ 
+
+  border: 1px solid #d0d5dd;
+
+ 
+
+  border-radius: 14px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.07);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.resumenGastosCaja span {
+
+ 
+
+  color: #b45309;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.resumenGastosCaja h2 {
+
+ 
+
+  margin: 4px 0;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.resumenGastosCaja p {
+
+ 
+
+  margin: 0;
+
+ 
+
+  color: #667085;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnVerGastosCaja {
+
+ 
+
+  min-height: 46px;
+
+ 
+
+  padding: 10px 18px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #92400e;
+
+ 
+
+  color: #ffffff;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.modalGastoCaja,
+
+ 
+
+.modalListadoGastosCaja,
+
+ 
+
+.modalDetalleGastoCaja,
+
+ 
+
+.modalAutorizarCancelacionGasto {
+
+ 
+
+  position: fixed;
+
+ 
+
+  inset: 0;
+
+ 
+
+  z-index: 12000;
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: center;
+
+ 
+
+  justify-content: center;
+
+ 
+
+  padding: 20px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.fondoModalGastoCaja {
+
+ 
+
+  position: absolute;
+
+ 
+
+  inset: 0;
+
+ 
+
+  background: rgba(15, 23, 42, 0.75);
+
+ 
+
+  backdrop-filter: blur(2px);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contenidoModalGastoCaja,
+
+ 
+
+.contenidoListadoGastosCaja {
+
+ 
+
+  position: relative;
+
+ 
+
+  z-index: 1;
+
+ 
+
+  width: min(620px, 100%);
+
+ 
+
+  max-height: calc(100vh - 40px);
+
+ 
+
+  overflow-y: auto;
+
+ 
+
+  padding: 22px;
+
+ 
+
+  border-radius: 16px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.38);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.contenidoListadoGastosCaja {
+
+ 
+
+  width: min(1050px, 100%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalGastoCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  align-items: flex-start;
+
+ 
+
+  justify-content: space-between;
+
+ 
+
+  gap: 18px;
+
+ 
+
+  padding-bottom: 14px;
+
+ 
+
+  border-bottom: 1px solid #e4e7ec;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalGastoCaja span {
+
+ 
+
+  color: #b45309;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalGastoCaja h2 {
+
+ 
+
+  margin: 4px 0 0;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.encabezadoModalGastoCaja > button {
+
+ 
+
+  width: 40px;
+
+ 
+
+  height: 40px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 50%;
+
+ 
+
+  background: #e5e7eb;
+
+ 
+
+  font-weight: 900;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.formGastoCaja {
+
+ 
+
+  display: grid;
+
+ 
+
+  gap: 9px;
+
+ 
+
+  padding-top: 18px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.formGastoCaja label {
+
+ 
+
+  margin-top: 5px;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.formGastoCaja input,
+
+ 
+
+.formGastoCaja textarea {
+
+ 
+
+  width: 100%;
+
+ 
+
+  padding: 11px 12px;
+
+ 
+
+  border: 1px solid #cfd4dc;
+
+ 
+
+  border-radius: 9px;
+
+ 
+
+  background: #ffffff;
+
+ 
+
+  font: inherit;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.formGastoCaja textarea {
+
+ 
+
+  resize: vertical;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.avisoGastoCaja {
+
+ 
+
+  padding: 12px;
+
+ 
+
+  border-left: 5px solid #f59e0b;
+
+ 
+
+  border-radius: 8px;
+
+ 
+
+  background: #fffbeb;
+
+ 
+
+  color: #78350f;
+
+ 
+
+  font-weight: 700;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesModalGastoCaja {
+
+ 
+
+  display: flex;
+
+ 
+
+  flex-wrap: wrap;
+
+ 
+
+  justify-content: flex-end;
+
+ 
+
+  gap: 10px;
+
+ 
+
+  margin-top: 18px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.accionesModalGastoCaja button {
+
+ 
+
+  min-height: 43px;
+
+ 
+
+  padding: 9px 15px;
+
+ 
+
+  border: 0;
+
+ 
+
+  border-radius: 9px;
+
+ 
+
+  background: #e5e7eb;
+
+ 
+
+  color: #111827;
+
+ 
+
+  font-weight: 800;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+#btnGuardarImprimirGastoCaja,
+
+ 
+
+#btnReimprimirGastoCaja {
+
+ 
+
+  background: #166534;
+
+ 
+
+  color: #ffffff;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnCancelarGastoCaja,
+
+ 
+
+#btnConfirmarCancelacionGasto {
+
+ 
+
+  background: #b91c1c !important;
+
+ 
+
+  color: #ffffff !important;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tablaListadoGastosCaja {
+
+ 
+
+  margin-top: 18px;
+
+ 
+
+  overflow-x: auto;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tablaListadoGastosCaja table {
+
+ 
+
+  width: 100%;
+
+ 
+
+  min-width: 850px;
+
+ 
+
+  border-collapse: collapse;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tablaListadoGastosCaja th,
+
+ 
+
+.tablaListadoGastosCaja td {
+
+ 
+
+  padding: 12px;
+
+ 
+
+  border-bottom: 1px solid #e4e7ec;
+
+ 
+
+  text-align: left;
+
+ 
+
+  vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.tablaListadoGastosCaja th {
+
+ 
+
+  background: #f9fafb;
+
+ 
+
+  color: #475467;
+
+ 
+
+  font-size: 0.82rem;
+
+ 
+
+  text-transform: uppercase;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btnDetalleGastoCaja {
+
+ 
+
+  min-height: 36px;
+
+ 
+
+  padding: 7px 11px;
+
+ 
+
+  border: 1px solid #2563eb;
+
+ 
 
   border-radius: 8px;
 
@@ -570,31 +10568,147 @@ body.modalAbierto {
 
   background: #ffffff;
 
-  color: #1d2939;
+ 
+
+  color: #1d4ed8;
 
  
 
-  font-weight: 700;
+  font-weight: 800;
 
-  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08);
+ 
 
 }
 
  
 
-.categoriaMenu:hover {
+ 
 
-  transform: translateY(-1px);
+ 
 
-  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.12);
+.estadoGastoCaja {
+
+ 
+
+  display: inline-flex;
+
+ 
+
+  padding: 5px 9px;
+
+ 
+
+  border-radius: 999px;
+
+ 
+
+  font-size: 0.8rem;
+
+ 
+
+  font-weight: 900;
+
+ 
 
 }
 
  
 
-.tarjetaProducto {
+ 
 
-  min-height: 126px;
+ 
+
+.estadoGastoActivo {
+
+ 
+
+  background: #dcfce7;
+
+ 
+
+  color: #166534;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.estadoGastoCancelado {
+
+ 
+
+  background: #fee2e2;
+
+ 
+
+  color: #991b1b;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.filaGastoCancelado td {
+
+ 
+
+  color: #667085;
+
+ 
+
+  background: #fff7f7;
+
+ 
+
+  text-decoration: line-through;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.filaGastoCancelado td:last-child,
+
+ 
+
+.filaGastoCancelado td:nth-last-child(2) {
+
+ 
+
+  text-decoration: none;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.totalGastosCaja {
+
+ 
+
+  margin-top: 16px;
+
+ 
 
   padding: 16px;
 
@@ -602,165 +10716,455 @@ body.modalAbierto {
 
   display: flex;
 
-  flex-direction: column;
+ 
 
-  align-items: stretch;
+  align-items: center;
+
+ 
 
   justify-content: space-between;
 
-  gap: 10px;
+ 
+
+  gap: 15px;
 
  
 
-  border: 1px solid #d7dce3;
-
-  border-radius: 12px;
+  border-radius: 11px;
 
  
 
-  background: #ffffff;
-
-  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.09);
+  background: #fff7ed;
 
  
-
-  text-align: left;
 
 }
 
  
 
-.tarjetaProducto h3 {
+ 
+
+ 
+
+.totalGastosCaja strong {
+
+ 
+
+  color: #9a3412;
+
+ 
+
+  font-size: 1.5rem;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.mensajeSinGastosCaja {
+
+ 
+
+  padding: 35px !important;
+
+ 
+
+  text-align: center !important;
+
+ 
+
+  color: #667085;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.detalleGastoGrid {
+
+ 
+
+  display: grid;
+
+ 
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+ 
+
+  gap: 12px;
+
+ 
+
+  padding-top: 18px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.detalleGastoGrid p {
+
+ 
 
   margin: 0;
 
  
 
-  color: #1d2939;
+  padding: 12px;
 
-  font-size: 1.05rem;
+ 
 
-  line-height: 1.25;
+  border: 1px solid #e4e7ec;
+
+ 
+
+  border-radius: 9px;
+
+ 
+
+  background: #f9fafb;
+
+ 
 
 }
 
  
 
-.tarjetaProducto p {
-
-  margin: 0;
+ 
 
  
 
-  color: #475467;
+.detalleGastoGrid span,
 
-  font-size: 1rem;
+ 
 
-  font-weight: 700;
+.datosCancelacionGasto span {
+
+ 
+
+  display: block;
+
+ 
+
+  margin-bottom: 4px;
+
+ 
+
+  color: #667085;
+
+ 
+
+  font-size: 0.82rem;
+
+ 
 
 }
 
  
 
-.tarjetaProducto button {
-
-  width: 100%;
-
-  min-height: 38px;
-
-  padding: 8px 12px;
+ 
 
  
 
-  border: 1px solid #98a2b3;
-
-  border-radius: 8px;
+.detalleGastoAncho,
 
  
 
-  background: #ffffff;
-
-  color: #1d2939;
+.detalleGastoImporte,
 
  
 
-  font-weight: 700;
+.datosCancelacionGasto {
+
+ 
+
+  grid-column: 1 / -1;
+
+ 
 
 }
 
  
 
-.tarjetaProducto button:hover {
+ 
 
-  background: #f2f4f7;
+ 
+
+.detalleGastoImporte strong {
+
+ 
+
+  color: #9a3412;
+
+ 
+
+  font-size: 1.6rem;
+
+ 
 
 }
 
  
 
-.tarjetaProducto:focus-within {
+ 
 
-  outline: 2px solid #667085;
+ 
 
-  outline-offset: 2px;
+.datosCancelacionGasto {
+
+ 
+
+  padding: 15px;
+
+ 
+
+  border: 2px solid #dc2626;
+
+ 
+
+  border-radius: 10px;
+
+ 
+
+  background: #fef2f2;
+
+ 
 
 }
+
+ 
+
+ 
+
+ 
+
+.datosCancelacionGasto h3 {
+
+ 
+
+  margin-top: 0;
+
+ 
+
+  color: #991b1b;
+
+ 
+
+}
+
+ 
+
+ 
 
  
 
 @media (max-width: 700px) {
 
-  #contenedorMenu {
+ 
 
-    grid-template-columns: 1fr;
+  .resumenGastosCaja {
 
-    gap: 10px;
+ 
 
-    padding: 12px;
+    align-items: stretch;
+
+ 
+
+    flex-direction: column;
+
+ 
 
   }
 
  
 
-  .tarjetaProducto {
+ 
 
-    min-height: 110px;
+ 
 
-    padding: 14px;
+  #btnVerGastosCaja {
+
+ 
+
+    width: 100%;
+
+ 
 
   }
 
+ 
+
+ 
+
+ 
+
+  .modalGastoCaja,
+
+ 
+
+  .modalListadoGastosCaja,
+
+ 
+
+  .modalDetalleGastoCaja,
+
+ 
+
+  .modalAutorizarCancelacionGasto {
+
+ 
+
+    align-items: flex-end;
+
+ 
+
+    padding: 10px;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .contenidoModalGastoCaja,
+
+ 
+
+  .contenidoListadoGastosCaja {
+
+ 
+
+    width: 100%;
+
+ 
+
+    max-height: 90vh;
+
+ 
+
+    padding: 17px;
+
+ 
+
+    border-radius: 16px 16px 0 0;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .accionesModalGastoCaja {
+
+ 
+
+    flex-direction: column;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .accionesModalGastoCaja button {
+
+ 
+
+    width: 100%;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .detalleGastoGrid {
+
+ 
+
+    grid-template-columns: 1fr;
+
+ 
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .detalleGastoAncho,
+
+ 
+
+  .detalleGastoImporte,
+
+ 
+
+  .datosCancelacionGasto {
+
+ 
+
+    grid-column: auto;
+
+ 
+
+  }
+
+ 
+
 }
+
+ 
 
  
 
 /* =========================================
 
-   AJUSTE DE CATEGORÍAS DEL MENÚ
-
-   Todos los rectángulos conservan el mismo tamaño
+   LISTADOS DE TARJETAS Y TRANSFERENCIAS
 
    ========================================= */
 
- 
+.modalListadoPagosCaja {
 
-#contenedorMenu > .categoriaMenu:first-child {
+  position: fixed;
 
-  grid-column: auto;
+  inset: 0;
 
-  justify-self: stretch;
-
-}
-
- 
-
-#contenedorMenu .categoriaMenu {
-
-  width: 100%;
-
-  min-height: 48px;
-
- 
+  z-index: 10020;
 
   display: flex;
 
@@ -768,43 +11172,53 @@ body.modalAbierto {
 
   justify-content: center;
 
+  padding: 20px;
+
 }
 
  
 
-/* =========================================
+.fondoModalPagosCaja {
 
-   PRODUCTOS DEL PEDIDO EN RECTÁNGULOS
+  position: absolute;
 
-   ========================================= */
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.72);
+
+}
 
  
 
-#listaPedidoComensal {
+.contenidoListadoPagosCaja {
+
+  position: relative;
+
+  z-index: 1;
+
+  width: min(820px, 100%);
+
+  max-height: calc(100vh - 40px);
+
+  overflow: hidden;
 
   display: flex;
 
   flex-direction: column;
 
-  gap: 10px;
+  border-radius: 18px;
 
- 
+  background: #ffffff;
 
-  padding: 12px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
 
 }
 
  
 
-.productoPedidoComensal {
+.encabezadoListadoPagosCaja {
 
-  width: 100%;
-
-  min-height: 68px;
-
-  padding: 12px 14px;
-
- 
+  padding: 20px 22px;
 
   display: flex;
 
@@ -812,145 +11226,247 @@ body.modalAbierto {
 
   justify-content: space-between;
 
-  gap: 14px;
+  gap: 16px;
 
- 
-
-  border: 1px solid #d0d5dd;
-
-  border-radius: 10px;
-
- 
-
-  background: #ffffff;
-
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.07);
+  border-bottom: 1px solid #e5e7eb;
 
 }
 
  
 
-.productoPedidoComensal > div {
-
-  min-width: 0;
-
- 
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 4px;
-
-}
-
- 
-
-.productoPedidoComensal > div strong {
-
-  color: #1d2939;
-
-  font-size: 1rem;
-
-  line-height: 1.2;
-
-}
-
- 
-
-.productoPedidoComensal > div span {
+.encabezadoListadoPagosCaja span {
 
   color: #667085;
 
-  font-size: 0.88rem;
-
-  line-height: 1.3;
+  font-weight: 700;
 
 }
 
  
 
-.productoPedidoComensal > strong {
+.encabezadoListadoPagosCaja h2 {
 
-  flex-shrink: 0;
-
- 
-
-  color: #1d2939;
-
-  font-size: 1rem;
-
-  white-space: nowrap;
+  margin: 4px 0 0;
 
 }
 
  
 
-/* Producto pendiente: permanece blanco y se puede modificar. */
+.encabezadoListadoPagosCaja button {
 
-.productoCapturado {
+  width: 42px;
 
-  cursor: pointer;
+  height: 42px;
 
-}
+  border: 0;
 
- 
+  border-radius: 10px;
 
-/* Producto enviado: gris claro y bloqueado. */
+  background: #e5e7eb;
 
-.productoEnviadoCocina {
-
-  background: #eeeeee;
-
-  border-color: #c9cdd3;
-
-  box-shadow: none;
-
-  cursor: default;
+  font-weight: 900;
 
 }
 
  
 
-.productoEnviadoCocina > div strong,
+.tablaListadoPagosCaja {
 
-.productoEnviadoCocina > div span,
-
-.productoEnviadoCocina > strong {
-
-  color: #666666;
+  overflow: auto;
 
 }
 
  
 
-.productoCapturado:hover {
+.tablaListadoPagosCaja table {
 
-  border-color: #98a2b3;
+  width: 100%;
 
-  box-shadow: 0 4px 9px rgba(15, 23, 42, 0.1);
+  border-collapse: collapse;
 
 }
 
  
 
-.pedidoVacio {
+.tablaListadoPagosCaja th,
 
-  padding: 30px 18px;
+.tablaListadoPagosCaja td {
+
+  padding: 13px 16px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  text-align: left;
+
+}
 
  
+
+.tablaListadoPagosCaja th {
+
+  position: sticky;
+
+  top: 0;
+
+  background: #f8fafc;
+
+  color: #344054;
+
+}
+
+ 
+
+.tablaListadoPagosCaja th:last-child,
+
+.tablaListadoPagosCaja td:last-child {
+
+  text-align: right;
+
+}
+
+ 
+
+.totalListadoPagosCaja {
+
+  padding: 18px 22px;
 
   display: flex;
 
-  flex-direction: column;
-
   align-items: center;
 
-  gap: 8px;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  border-top: 2px solid #d0d5dd;
+
+  background: #f8fafc;
+
+}
 
  
 
-  text-align: center;
+.totalListadoPagosCaja span,
+
+.totalListadoPagosCaja strong {
+
+  font-size: 1.15rem;
+
+  font-weight: 900;
+
+}
+
+ 
+
+.mensajeSinPagosCaja {
+
+  padding: 30px !important;
+
+  text-align: center !important;
+
+  color: #667085;
+
+}
+
+ 
+
+/* Captura del pago mixto con tres formas de pago. */
+
+.bloquePagoMixtoCaja {
+
+  padding: 14px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px 14px;
+
+  border: 1px solid #d0d5dd;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+}
+
+ 
+
+.bloquePagoMixtoCaja label,
+
+.bloquePagoMixtoCaja input,
+
+.bloquePagoMixtoCaja small,
+
+.resumenCapturaMixtaCaja,
+
+.diferenciaPagoMixtoCaja {
+
+  grid-column: 1 / -1;
+
+}
+
+ 
+
+.bloquePagoMixtoCaja input {
+
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #98a2b3;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+}
+
+ 
+
+.resumenCapturaMixtaCaja {
+
+  margin-top: 4px;
+
+  padding-top: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  border-top: 1px solid #d0d5dd;
+
+}
+
+ 
+
+.diferenciaPagoMixtoCaja {
+
+  margin: 0;
+
+  color: #b42318;
+
+  font-weight: 800;
+
+}
+
+ 
+
+.pagoMixtoCorrectoCaja {
+
+  color: #027a48;
+
+}
+
+ 
+
+.pagoMixtoExcedidoCaja {
+
+  color: #b42318;
 
 }
 
@@ -958,18 +11474,805 @@ body.modalAbierto {
 
 @media (max-width: 700px) {
 
-  .productoPedidoComensal {
+  .modalListadoPagosCaja {
 
-    align-items: flex-start;
+    align-items: flex-end;
+
+    padding: 0;
 
   }
 
  
 
-  .productoPedidoComensal > strong {
+  .contenidoListadoPagosCaja {
 
-    padding-top: 2px;
+    width: 100%;
+
+    max-height: 90vh;
+
+    border-radius: 18px 18px 0 0;
 
   }
 
+ 
+
+  .tablaListadoPagosCaja th,
+
+  .tablaListadoPagosCaja td {
+
+    padding: 11px 9px;
+
+    font-size: 0.88rem;
+
+  }
+
+}
+
+#btnTarjetasCaja {
+    background: #2563eb;
+    color: white;
+    border: 1px solid #1d4ed8;
+}
+
+#btnTarjetasCaja:hover {
+    background: #1d4ed8;
+}
+
+#btnTransferenciasCaja {
+    background: #0f766e;
+    color: white;
+    border: 1px solid #115e59;
+}
+
+#btnTransferenciasCaja:hover {
+    background: #115e59;
+}
+
+/* ============================================================
+   REPORTE DE VENTAS POR RANGO DE FECHAS
+   ============================================================ */
+
+.panelReporteVentas {
+  margin-top: 20px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #dfe5ee;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ============================================================
+   FILTROS DE FECHAS
+   ============================================================ */
+
+.filtrosReporteVentas {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.campoFechaReporte {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campoFechaReporte label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.campoFechaReporte input {
+  width: 150px;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 16px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.campoFechaReporte input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.campoFechaReporte input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.btnConsultarReporteVentas,
+.btnExportarReporteVentas {
+  min-height: 42px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    opacity 0.2s;
+}
+
+.btnConsultarReporteVentas {
+  color: #ffffff;
+  background: #2563eb;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.24);
+}
+
+.btnConsultarReporteVentas:hover {
+  transform: translateY(-1px);
+  background: #1d4ed8;
+}
+
+.btnExportarReporteVentas {
+  color: #ffffff;
+  background: #15803d;
+  box-shadow: 0 6px 14px rgba(21, 128, 61, 0.2);
+}
+
+.btnExportarReporteVentas:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #166534;
+}
+
+.btnExportarReporteVentas:disabled {
+  color: #94a3b8;
+  background: #e2e8f0;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+
+/* ============================================================
+   MENSAJES
+   ============================================================ */
+
+.mensajeReporteVentas {
+  min-height: 22px;
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.mensajeReporteVentas.exito {
+  color: #15803d;
+}
+
+
+/* ============================================================
+   TARJETAS DE INDICADORES
+   ============================================================ */
+
+.resumenReporteVentas {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.tarjetaReporteVentas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 105px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.tarjetaReporteVentas span {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.tarjetaReporteVentas strong {
+  font-size: 25px;
+  color: #172033;
+}
+
+.tarjetaTotalReporte {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-color: transparent;
+}
+
+.tarjetaTotalReporte span,
+.tarjetaTotalReporte strong {
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   TABLA DEL REPORTE
+   ============================================================ */
+
+.tablaReporteVentasContenedor {
+  width: 100%;
+  margin-top: 25px;
+  overflow-x: auto;
+  border: 1px solid #dfe5ee;
+  border-radius: 13px;
+}
+
+.tablaReporteVentas {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.tablaReporteVentas thead {
+  background: #172033;
+}
+
+.tablaReporteVentas th {
+  padding: 13px 12px;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.tablaReporteVentas td {
+  padding: 12px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tablaReporteVentas tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.tablaReporteVentas tbody tr:hover {
+  background: #eff6ff;
+}
+
+.tablaReporteVentas th:nth-child(7),
+.tablaReporteVentas th:nth-child(8),
+.tablaReporteVentas th:nth-child(9),
+.tablaReporteVentas td:nth-child(7),
+.tablaReporteVentas td:nth-child(8),
+.tablaReporteVentas td:nth-child(9) {
+  text-align: right;
+}
+
+.mensajeTablaReporte {
+  padding: 35px !important;
+  text-align: center !important;
+  color: #64748b !important;
+}
+
+
+/* ============================================================
+   RESUMEN POR FORMA DE PAGO
+   ============================================================ */
+
+.resumenFormasPagoReporte {
+  max-width: 520px;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #dfe5ee;
+  border-radius: 14px;
+}
+
+.resumenFormasPagoReporte h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #172033;
+}
+
+.listaFormasPagoReporte {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.listaFormasPagoReporte > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.listaFormasPagoReporte span {
+  color: #475569;
+}
+
+.listaFormasPagoReporte strong {
+  color: #172033;
+}
+
+.listaFormasPagoReporte .totalFormasPagoReporte {
+  margin-top: 5px;
+  padding: 14px 12px;
+  color: #ffffff;
+  background: #172033;
+  border: none;
+  border-radius: 9px;
+}
+
+.totalFormasPagoReporte span,
+.totalFormasPagoReporte strong {
+  color: #ffffff;
+  font-size: 17px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .resumenReporteVentas {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .panelReporteVentas {
+    padding: 15px;
+    border-radius: 13px;
+  }
+
+  .filtrosReporteVentas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .campoFechaReporte input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btnConsultarReporteVentas,
+  .btnExportarReporteVentas {
+    width: 100%;
+  }
+
+  .resumenReporteVentas {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .tarjetaReporteVentas {
+    min-height: 85px;
+    padding: 14px;
+  }
+
+  .tarjetaReporteVentas strong {
+    font-size: 20px;
+  }
+
+  .tarjetaTotalReporte {
+    grid-column: span 2;
+  }
+
+  .resumenFormasPagoReporte {
+    max-width: none;
+  }
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 430px) {
+  .filtrosReporteVentas {
+    grid-template-columns: 1fr;
+  }
+
+  .resumenReporteVentas {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetaTotalReporte {
+    grid-column: auto;
+  }
+}     
+
+/* ============================================================
+   REPORTE DE VENTAS ACUMULADAS POR ARTÍCULOS
+   ============================================================ */
+
+.panelReporteArticulos {
+  margin-top: 20px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #dfe5ee;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ============================================================
+   FILTROS DE FECHA
+   ============================================================ */
+
+.filtrosReporteArticulos {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.campoFechaReporteArticulo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campoFechaReporteArticulo label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.campoFechaReporteArticulo input {
+  width: 150px;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 16px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.campoFechaReporteArticulo input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.campoFechaReporteArticulo input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.btnConsultarReporteArticulos,
+.btnExportarReporteArticulos {
+  min-height: 42px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    opacity 0.2s;
+}
+
+.btnConsultarReporteArticulos {
+  color: #ffffff;
+  background: #2563eb;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.24);
+}
+
+.btnConsultarReporteArticulos:hover {
+  transform: translateY(-1px);
+  background: #1d4ed8;
+}
+
+.btnExportarReporteArticulos {
+  color: #ffffff;
+  background: #15803d;
+  box-shadow: 0 6px 14px rgba(21, 128, 61, 0.2);
+}
+
+.btnExportarReporteArticulos:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #166534;
+}
+
+.btnExportarReporteArticulos:disabled {
+  color: #94a3b8;
+  background: #e2e8f0;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+
+/* ============================================================
+   MENSAJES
+   ============================================================ */
+
+.mensajeReporteArticulos {
+  min-height: 22px;
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.mensajeReporteArticulos.exito {
+  color: #15803d;
+}
+
+
+/* ============================================================
+   TARJETAS DE INDICADORES
+   ============================================================ */
+
+.resumenReporteArticulos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.tarjetaReporteArticulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 105px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.tarjetaReporteArticulos span {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.tarjetaReporteArticulos strong {
+  font-size: 25px;
+  color: #172033;
+}
+
+.tarjetaTotalReporteArticulos {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-color: transparent;
+}
+
+.tarjetaTotalReporteArticulos span,
+.tarjetaTotalReporteArticulos strong {
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   TABLA DE ARTÍCULOS
+   ============================================================ */
+
+.tablaReporteArticulosContenedor {
+  width: 100%;
+  margin-top: 25px;
+  overflow-x: auto;
+  border: 1px solid #dfe5ee;
+  border-radius: 13px;
+}
+
+.tablaReporteArticulos {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.tablaReporteArticulos thead {
+  background: #172033;
+}
+
+.tablaReporteArticulos th {
+  padding: 13px 12px;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.tablaReporteArticulos td {
+  padding: 12px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tablaReporteArticulos tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.tablaReporteArticulos tbody tr:hover {
+  background: #eff6ff;
+}
+
+.tablaReporteArticulos th:nth-child(1),
+.tablaReporteArticulos td:nth-child(1) {
+  width: 65px;
+  text-align: center;
+}
+
+.tablaReporteArticulos th:nth-child(5),
+.tablaReporteArticulos td:nth-child(5) {
+  text-align: center;
+}
+
+.tablaReporteArticulos th:nth-child(6),
+.tablaReporteArticulos th:nth-child(7),
+.tablaReporteArticulos td:nth-child(6),
+.tablaReporteArticulos td:nth-child(7) {
+  text-align: right;
+}
+
+.mensajeTablaReporteArticulos {
+  padding: 35px !important;
+  text-align: center !important;
+  color: #64748b !important;
+}
+
+
+/* ============================================================
+   ETIQUETAS DE TIPO
+   ============================================================ */
+
+.tipoReporteArticulo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tipoArticuloReporte {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.tipoExtraReporte {
+  color: #9a3412;
+  background: #ffedd5;
+}
+
+
+/* ============================================================
+   TOTAL DE LA TABLA
+   ============================================================ */
+
+.tablaReporteArticulos tfoot td {
+  padding: 14px 12px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #172033;
+  border-top: 2px solid #0f172a;
+}
+
+.tablaReporteArticulos tfoot td:first-child {
+  text-align: left;
+}
+
+.tablaReporteArticulos tfoot td:nth-child(5) {
+  text-align: center;
+}
+
+.tablaReporteArticulos tfoot td:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .resumenReporteArticulos {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .panelReporteArticulos {
+    padding: 15px;
+    border-radius: 13px;
+  }
+
+  .filtrosReporteArticulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .campoFechaReporteArticulo input {
+    width: 100%;
+  }
+
+  .btnConsultarReporteArticulos,
+  .btnExportarReporteArticulos {
+    width: 100%;
+  }
+
+  .resumenReporteArticulos {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .tarjetaReporteArticulos {
+    min-height: 85px;
+    padding: 14px;
+  }
+
+  .tarjetaReporteArticulos strong {
+    font-size: 20px;
+  }
+
+  .tarjetaTotalReporteArticulos {
+    grid-column: span 2;
+  }
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 430px) {
+  .filtrosReporteArticulos {
+    grid-template-columns: 1fr;
+  }
+
+  .resumenReporteArticulos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetaTotalReporteArticulos {
+    grid-column: auto;
+  }
 }

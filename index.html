@@ -3,160 +3,180 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
 
- 
-
   <meta
-
     name="viewport"
-
     content="width=device-width, initial-scale=1.0"
-
   >
-
- 
-
   <title>Restaurant</title>
 
- 
-
   <link rel="stylesheet" href="styles.css">
-
   <link rel="stylesheet" href="css/login.css">
-
   <link rel="stylesheet" href="css/mesas.css">
 
- 
+  <style>
+    /* ===== PANEL PRINCIPAL DE ADMINISTRACIÓN ===== */
+    .panelNavegacionAdmin {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 0 22px;
+      padding: 12px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .btnModuloAdmin {
+      border: 1px solid #d1d5db;
+      background: #f8fafc;
+      color: #334155;
+      border-radius: 12px;
+      padding: 11px 16px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btnModuloAdmin:hover {
+      transform: translateY(-1px);
+      border-color: #94a3b8;
+      background: #eef2ff;
+    }
+
+    .btnModuloAdmin.activo {
+      color: #ffffff;
+      background: #2563eb;
+      border-color: #2563eb;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+    }
+
+    .encabezadoModuloAdmin {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .encabezadoModuloAdmin h2 {
+      margin: 4px 0 5px;
+      font-size: 28px;
+    }
+
+    .encabezadoModuloAdmin p {
+      margin: 0;
+      color: #64748b;
+    }
+
+    .moduloAdminProximamente {
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      padding: 35px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px dashed #94a3b8;
+      border-radius: 18px;
+    }
+
+    .moduloAdminProximamente span {
+      display: block;
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
+
+    .moduloAdminProximamente h2 {
+      margin: 0 0 8px;
+    }
+
+    .moduloAdminProximamente p {
+      max-width: 600px;
+      margin: 0;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      .panelNavegacionAdmin {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .btnModuloAdmin {
+        width: 100%;
+      }
+
+      .encabezadoModuloAdmin {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .encabezadoModuloAdmin .btnNuevoEmpleado {
+        width: 100%;
+      }
+    }
+  </style>
 
 </head>
 
- 
-
 <body>
-
- 
-
   <main id="app">
-
- 
-
     <section
-
       id="pantallaLogin"
-
       class="pantallaLogin"
-
     >
-
- 
-
       <div class="loginFondo"></div>
-
- 
-
       <div class="loginContenido">
-
- 
-
         <div class="loginMarca">
-
- 
-
           <div class="loginLogo">
-
             🍽️
-
           </div>
-
- 
-
           <h1>Restaurant</h1>
-
- 
-
           <p>
-
             Sistema de administración
-
           </p>
-
- 
-
         </div>
-
- 
-
         <form
-
           id="formLogin"
-
           class="loginFormulario"
-
         >
-
- 
-
           <h2>Iniciar sesión</h2>
-
- 
-
           <p class="loginSubtitulo">
-
             Escribe tus datos para entrar al sistema
-
           </p>
-
- 
-
           <label for="usuario">
-
             Usuario
-
           </label>
-
- 
-
           <div class="campoLogin">
-
- 
-
             <span>👤</span>
-
- 
-
             <input
-
               id="usuario"
-
               name="usuario"
-
               type="text"
-
               placeholder="Escribe tu usuario"
-
               autocomplete="username"
-
               required
-
             >
-
- 
-
           </div>
-
- 
-
           <label for="password">
-
             Contraseña
-
           </label>
 
  
 
+ 
+
+ 
+
           <div class="campoLogin">
+
+ 
+
+ 
 
  
 
@@ -164,39 +184,135 @@
 
  
 
+ 
+
+ 
+
             <input
+
+ 
+
+ 
+
+ 
 
               id="password"
 
+ 
+
+ 
+
+ 
+
               name="password"
+
+ 
+
+ 
+
+ 
 
               type="password"
 
+ 
+
+ 
+
+ 
+
               placeholder="Escribe tu contraseña"
+
+ 
+
+ 
+
+ 
 
               autocomplete="current-password"
 
+ 
+
+ 
+
+ 
+
               required
+
+ 
+
+ 
+
+ 
 
             >
 
  
 
+ 
+
+ 
+
             <button
+
+ 
+
+ 
+
+ 
 
               id="btnMostrarPassword"
 
+ 
+
+ 
+
+ 
+
               class="btnMostrarPassword"
+
+ 
+
+ 
+
+ 
 
               type="button"
 
+ 
+
+ 
+
+ 
+
               aria-label="Mostrar contraseña"
+
+ 
+
+ 
+
+ 
 
             >
 
+ 
+
+ 
+
+ 
+
               👁️
 
+ 
+
+ 
+
+ 
+
             </button>
+
+ 
+
+ 
 
  
 
@@ -204,29 +320,95 @@
 
  
 
+ 
+
+ 
+
           <p
+
+ 
+
+ 
+
+ 
 
             id="mensajeLogin"
 
+ 
+
+ 
+
+ 
+
             class="mensajeLogin"
+
+ 
+
+ 
+
+ 
 
           ></p>
 
  
 
+ 
+
+ 
+
           <button
+
+ 
+
+ 
+
+ 
 
             id="btnEntrar"
 
+ 
+
+ 
+
+ 
+
             class="btnEntrar"
+
+ 
+
+ 
+
+ 
 
             type="submit"
 
+ 
+
+ 
+
+ 
+
           >
+
+ 
+
+ 
+
+ 
 
             Entrar
 
+ 
+
+ 
+
+ 
+
           </button>
+
+ 
+
+ 
 
  
 
@@ -234,7 +416,15 @@
 
  
 
+ 
+
+ 
+
             <p>Usuarios iniciales</p>
+
+ 
+
+ 
 
  
 
@@ -242,67 +432,231 @@
 
  
 
+ 
+
+ 
+
               <button
+
+ 
+
+ 
+
+ 
 
                 type="button"
 
+ 
+
+ 
+
+ 
+
                 class="usuarioPrueba"
+
+ 
+
+ 
+
+ 
 
                 data-usuario="admin"
 
+ 
+
+ 
+
+ 
+
               >
+
+ 
+
+ 
+
+ 
 
                 Administrador
 
+ 
+
+ 
+
+ 
+
               </button>
+
+ 
+
+ 
 
  
 
               <button
 
+ 
+
+ 
+
+ 
+
                 type="button"
 
+ 
+
+ 
+
+ 
+
                 class="usuarioPrueba"
+
+ 
+
+ 
+
+ 
 
                 data-usuario="cajero"
 
+ 
+
+ 
+
+ 
+
               >
+
+ 
+
+ 
+
+ 
 
                 Cajero
 
+ 
+
+ 
+
+ 
+
               </button>
+
+ 
+
+ 
 
  
 
               <button
 
+ 
+
+ 
+
+ 
+
                 type="button"
 
+ 
+
+ 
+
+ 
+
                 class="usuarioPrueba"
+
+ 
+
+ 
+
+ 
 
                 data-usuario="mesero"
 
+ 
+
+ 
+
+ 
+
               >
 
+ 
+
+ 
+
+ 
+
                 Mesero
+
+ 
+
+ 
+
+ 
 
               </button>
 
  
 
+ 
+
+ 
+
               <button
+
+ 
+
+ 
+
+ 
 
                 type="button"
 
+ 
+
+ 
+
+ 
+
                 class="usuarioPrueba"
+
+ 
+
+ 
+
+ 
 
                 data-usuario="cocina"
 
+ 
+
+ 
+
+ 
+
               >
+
+ 
+
+ 
+
+ 
 
                 Cocina
 
+ 
+
+ 
+
+ 
+
               </button>
+
+ 
+
+ 
 
  
 
@@ -310,7 +664,15 @@
 
  
 
+ 
+
+ 
+
           </div>
+
+ 
+
+ 
 
  
 
@@ -318,31 +680,1549 @@
 
  
 
+ 
+
+ 
+
         <div class="loginPie">
+
+ 
+
+ 
 
  
 
           <div>
 
+ 
+
+ 
+
+ 
+
             <strong id="fechaLogin"></strong>
 
+ 
+
+ 
+
+ 
+
             <span id="horaLogin"></span>
+
+ 
+
+ 
+
+ 
 
           </div>
 
  
 
+ 
+
+ 
+
           <span class="estadoServidor">
+
+ 
+
+ 
+
+ 
 
             <span class="puntoServidor"></span>
 
+ 
+
+ 
+
+ 
+
             Sistema conectado
+
+ 
+
+ 
+
+ 
 
           </span>
 
  
 
+ 
+
+ 
+
         </div>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+<section
+
+ 
+
+ 
+
+ 
+
+  id="pantallaSistema"
+
+ 
+
+ 
+
+ 
+
+  class="pantallaSistema oculto"
+
+ 
+
+ 
+
+ 
+
+>
+
+ 
+
+ 
+
+ 
+
+  <header class="encabezadoSistema">
+
+ 
+
+ 
+
+ 
+
+    <div class="marcaEncabezado">
+
+ 
+
+ 
+
+ 
+
+      <strong>🍽️ Restaurant</strong>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <div class="datosUsuario">
+
+ 
+
+ 
+
+ 
+
+      <span id="nombreUsuarioActivo"></span>
+
+ 
+
+ 
+
+ 
+
+      <span id="rolUsuarioActivo"></span>
+
+ 
+
+ 
+
+ 
+
+      <button
+
+ 
+
+ 
+
+ 
+
+        id="btnCerrarSesion"
+
+ 
+
+ 
+
+ 
+
+        type="button"
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        Cerrar sesión
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+  </header>
+
+ 
+
+ 
+
+ 
+
+  <!-- PANTALLA TEMPORAL PARA OTROS USUARIOS -->
+
+ 
+
+ 
+
+ 
+
+  <section
+
+ 
+
+ 
+
+ 
+
+    id="pantallaBienvenida"
+
+ 
+
+ 
+
+ 
+
+    class="contenidoTemporal oculto"
+
+ 
+
+ 
+
+ 
+
+  >
+
+ 
+
+ 
+
+ 
+
+    <h2 id="tituloBienvenida">
+
+ 
+
+ 
+
+ 
+
+      Bienvenido
+
+ 
+
+ 
+
+ 
+
+    </h2>
+
+ 
+
+ 
+
+ 
+
+    <p>
+
+ 
+
+ 
+
+ 
+
+      El inicio de sesión está funcionando.
+
+ 
+
+ 
+
+ 
+
+    </p>
+
+ 
+
+ 
+
+ 
+
+  </section>
+
+ 
+
+ 
+
+ 
+
+  <!-- PANTALLA DE ADMINISTRACIÓN -->
+  <section id="pantallaAdmin" class="pantallaAdmin oculto">
+
+    <header class="encabezadoAdmin">
+      <div>
+        <span class="etiquetaAdmin">Administración del restaurante</span>
+        <h1>⚙️ Panel de Administración</h1>
+        <p>Selecciona un módulo para consultar o actualizar la información del restaurante.</p>
+      </div>
+    </header>
+
+    <nav class="panelNavegacionAdmin" aria-label="Módulos de administración">
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="resumen">🏠 Resumen</button>
+      <button class="btnModuloAdmin activo" type="button" data-modulo-admin="empleados">👥 Empleados</button>
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="reportes">📊 Reportes</button>
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="reporteArticulos">📦 Venta de Artículos</button>
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="articulos">🍔 Lista de Artículos</button>
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="caja">💵 Caja</button>
+      <button class="btnModuloAdmin" type="button" data-modulo-admin="configuracion">⚙️ Configuración</button>
+    </nav>
+
+    <!-- MÓDULO RESUMEN -->
+    <section id="moduloAdminResumen" class="moduloAdmin oculto">
+      <div class="moduloAdminProximamente">
+        <div>
+          <span>🏠</span>
+          <h2>Resumen</h2>
+          <p>Este espacio quedará preparado para mostrar ventas del día, pedidos cobrados, gastos y formas de pago.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO EMPLEADOS -->
+    <section id="moduloAdminEmpleados" class="moduloAdmin">
+      <div class="encabezadoModuloAdmin">
+        <div>
+          <span class="etiquetaAdmin">Personal del restaurante</span>
+          <h2>👥 Empleados</h2>
+          <p>Da de alta y modifica empleados. Los registros no se eliminan.</p>
+        </div>
+        <button id="btnNuevoEmpleado" class="btnNuevoEmpleado" type="button">＋ Nuevo empleado</button>
+      </div>
+
+      <section class="panelEmpleados">
+        <div class="barraEmpleados">
+          <div>
+            <strong id="totalEmpleadosAdmin">0 empleados</strong>
+            <span>Los empleados inactivos conservan su historial.</span>
+          </div>
+          <label class="buscadorEmpleados" for="buscarEmpleadoAdmin">
+            <span>🔎</span>
+            <input id="buscarEmpleadoAdmin" type="search" placeholder="Buscar por nombre, puesto o usuario">
+          </label>
+        </div>
+
+        <div class="tablaEmpleadosContenedor">
+          <table class="tablaEmpleados">
+            <thead>
+              <tr>
+                <th>N.º</th>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th>Usuario</th>
+                <th>Teléfono</th>
+                <th>Ingreso</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaEmpleados"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <!-- MÓDULOS PREPARADOS PARA LAS SIGUIENTES ETAPAS -->
+    <!-- MÓDULO DE REPORTES -->
+<section
+  id="moduloAdminReportes"
+  class="moduloAdmin oculto"
+>
+  <div class="encabezadoModuloAdmin">
+
+    <div>
+      <span class="etiquetaAdmin">
+        Información de ventas
+      </span>
+
+      <h2>
+        📊 Reporte de ventas
+      </h2>
+
+      <p>
+        Consulta las ventas realizadas entre dos fechas.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- FILTROS DEL REPORTE -->
+  <section class="panelReporteVentas">
+
+    <div class="filtrosReporteVentas">
+
+      <div class="campoFechaReporte">
+
+        <label for="fechaInicialReporte">
+          Fecha inicial
+        </label>
+
+        <input
+          id="fechaInicialReporte"
+          type="text"
+          inputmode="numeric"
+          maxlength="8"
+          placeholder="dd/mm/aa"
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <div class="campoFechaReporte">
+
+        <label for="fechaFinalReporte">
+          Fecha final
+        </label>
+
+        <input
+          id="fechaFinalReporte"
+          type="text"
+          inputmode="numeric"
+          maxlength="8"
+          placeholder="dd/mm/aa"
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <button
+        id="btnConsultarReporteVentas"
+        class="btnConsultarReporteVentas"
+        type="button"
+      >
+        🔍 Consultar
+      </button>
+
+
+      <button
+        id="btnExportarReporteVentas"
+        class="btnExportarReporteVentas"
+        type="button"
+        disabled
+      >
+        📄 Exportar Excel
+      </button>
+
+    </div>
+
+
+    <p
+      id="mensajeReporteVentas"
+      class="mensajeReporteVentas"
+    ></p>
+
+
+    <!-- INDICADORES -->
+    <div class="resumenReporteVentas">
+
+      <article class="tarjetaReporteVentas">
+
+        <span>
+          Consumo
+        </span>
+
+        <strong id="reporteTotalConsumo">
+          $0.00
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteVentas">
+
+        <span>
+          Propinas
+        </span>
+
+        <strong id="reporteTotalPropinas">
+          $0.00
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteVentas tarjetaTotalReporte">
+
+        <span>
+          Total cobrado
+        </span>
+
+        <strong id="reporteTotalCobrado">
+          $0.00
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteVentas">
+
+        <span>
+          Tickets
+        </span>
+
+        <strong id="reporteCantidadTickets">
+          0
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteVentas">
+
+        <span>
+          Promedio por ticket
+        </span>
+
+        <strong id="reportePromedioTicket">
+          $0.00
+        </strong>
+
+      </article>
+
+    </div>
+
+
+    <!-- TABLA DE VENTAS -->
+    <div class="tablaReporteVentasContenedor">
+
+      <table class="tablaReporteVentas">
+
+        <thead>
+
+          <tr>
+            <th>Folio</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Mesa</th>
+            <th>Cajero</th>
+            <th>Pago</th>
+            <th>Consumo</th>
+            <th>Propina</th>
+            <th>Total</th>
+          </tr>
+
+        </thead>
+
+
+        <tbody id="cuerpoTablaReporteVentas">
+
+          <tr>
+
+            <td
+              colspan="9"
+              class="mensajeTablaReporte"
+            >
+              Selecciona una fecha inicial y una fecha final.
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <!-- RESUMEN POR FORMA DE PAGO -->
+    <section class="resumenFormasPagoReporte">
+
+      <h3>
+        💳 Resumen por forma de pago
+      </h3>
+
+
+      <div class="listaFormasPagoReporte">
+
+        <div>
+          <span>Efectivo</span>
+
+          <strong id="reporteTotalEfectivo">
+            $0.00
+          </strong>
+        </div>
+
+
+        <div>
+          <span>Tarjeta</span>
+
+          <strong id="reporteTotalTarjeta">
+            $0.00
+          </strong>
+        </div>
+
+
+        <div>
+          <span>Transferencia</span>
+
+          <strong id="reporteTotalTransferencia">
+            $0.00
+          </strong>
+        </div>
+
+        <div class="totalFormasPagoReporte">
+
+          <span>Total</span>
+
+          <strong id="reporteTotalFormasPago">
+            $0.00
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+</section>
+
+<!-- =========================================================
+     REPORTE DE VENTAS ACUMULADAS POR ARTÍCULO
+     ========================================================= -->
+
+<section
+  id="moduloAdminReporteArticulos"
+  class="moduloAdmin oculto"
+>
+  <div class="encabezadoModuloAdmin">
+
+    <div>
+      <span class="etiquetaAdmin">
+        Análisis de productos vendidos
+      </span>
+
+      <h2>
+        📦 Ventas acumuladas por artículos
+      </h2>
+
+      <p>
+        Consulta la cantidad y el importe acumulado de artículos
+        y extras vendidos entre dos fechas.
+      </p>
+    </div>
+
+  </div>
+
+
+  <section class="panelReporteArticulos">
+
+    <!-- FILTROS DE FECHA -->
+    <div class="filtrosReporteArticulos">
+
+      <div class="campoFechaReporteArticulo">
+
+        <label for="fechaInicialReporteArticulos">
+          Fecha inicial
+        </label>
+
+        <input
+          id="fechaInicialReporteArticulos"
+          type="text"
+          inputmode="numeric"
+          maxlength="8"
+          placeholder="dd/mm/aa"
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <div class="campoFechaReporteArticulo">
+
+        <label for="fechaFinalReporteArticulos">
+          Fecha final
+        </label>
+
+        <input
+          id="fechaFinalReporteArticulos"
+          type="text"
+          inputmode="numeric"
+          maxlength="8"
+          placeholder="dd/mm/aa"
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <button
+        id="btnConsultarReporteArticulos"
+        class="btnConsultarReporteArticulos"
+        type="button"
+      >
+        🔍 Consultar
+      </button>
+
+
+      <button
+        id="btnExportarReporteArticulos"
+        class="btnExportarReporteArticulos"
+        type="button"
+        disabled
+      >
+        📄 Exportar Excel
+      </button>
+
+    </div>
+
+
+    <p
+      id="mensajeReporteArticulos"
+      class="mensajeReporteArticulos"
+    ></p>
+
+
+    <!-- INDICADORES GENERALES -->
+    <div class="resumenReporteArticulos">
+
+      <article class="tarjetaReporteArticulos">
+
+        <span>
+          Artículos diferentes
+        </span>
+
+        <strong id="totalArticulosDiferentes">
+          0
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteArticulos">
+
+        <span>
+          Unidades de artículos
+        </span>
+
+        <strong id="totalUnidadesArticulos">
+          0
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteArticulos">
+
+        <span>
+          Unidades de extras
+        </span>
+
+        <strong id="totalUnidadesExtras">
+          0
+        </strong>
+
+      </article>
+
+
+      <article class="tarjetaReporteArticulos">
+
+        <span>
+          Venta de extras
+        </span>
+
+        <strong id="ventaTotalExtras">
+          $0.00
+        </strong>
+
+      </article>
+
+
+      <article
+        class="tarjetaReporteArticulos tarjetaTotalReporteArticulos"
+      >
+
+        <span>
+          Venta acumulada
+        </span>
+
+        <strong id="ventaTotalArticulos">
+          $0.00
+        </strong>
+
+      </article>
+
+    </div>
+
+
+    <!-- TABLA ACUMULADA -->
+    <div class="tablaReporteArticulosContenedor">
+
+      <table class="tablaReporteArticulos">
+
+        <thead>
+
+          <tr>
+            <th>N.º</th>
+            <th>Tipo</th>
+            <th>Artículo o extra</th>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+            <th>Precio promedio</th>
+            <th>Venta acumulada</th>
+          </tr>
+
+        </thead>
+
+
+        <tbody id="cuerpoTablaReporteArticulos">
+
+          <tr>
+
+            <td
+              colspan="7"
+              class="mensajeTablaReporteArticulos"
+            >
+              Selecciona una fecha inicial y una fecha final.
+            </td>
+
+          </tr>
+
+        </tbody>
+
+
+        <tfoot>
+
+          <tr class="filaTotalReporteArticulos">
+
+            <td colspan="4">
+              GRAN TOTAL
+            </td>
+
+            <td id="granTotalCantidadArticulos">
+              0
+            </td>
+
+            <td>
+              —
+            </td>
+
+            <td id="granTotalVentaArticulos">
+              $0.00
+            </td>
+
+          </tr>
+
+        </tfoot>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</section>
+
+    <section id="moduloAdminArticulos" class="moduloAdmin oculto">
+      <div class="moduloAdminProximamente">
+        <div>
+          <span>🍔</span>
+          <h2>Artículos</h2>
+          <p>Aquí se administrarán posteriormente los productos, precios, categorías, extras y disponibilidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="moduloAdminCaja" class="moduloAdmin oculto">
+      <div class="moduloAdminProximamente">
+        <div>
+          <span>💵</span>
+          <h2>Caja</h2>
+          <p>Este módulo quedará disponible para consultar cortes, ingresos, gastos y diferencias de caja.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="moduloAdminConfiguracion" class="moduloAdmin oculto">
+      <div class="moduloAdminProximamente">
+        <div>
+          <span>⚙️</span>
+          <h2>Configuración</h2>
+          <p>Aquí se podrán actualizar después los datos generales y preferencias del restaurante.</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+<!--PANTALLA DE CAJERO-->
+<section id="pantallaCaja" class="pantallaCaja oculto">
+    <header class="encabezadoCaja">
+        <div>
+           <span class="etiquetaCaja">
+                Administración de Caja
+            </span>
+            <h1>
+                💵 Caja
+            </h1>
+            <p>
+                Apertura, movimientos y cierre de caja.
+            </p>
+        </div>
+        <div class="estadoCajaSuperior">
+            <span id="estadoCajaActual">
+                🔴 Caja Cerrada
+            </span>
+        </div>
+
+ 
+
+ 
+
+ 
+
+    </header>
+
+ 
+
+ 
+
+ 
+
+    <section class="panelCaja">
+
+ 
+
+ 
+
+ 
+
+        <div class="tarjetaCaja">
+
+ 
+
+ 
+
+ 
+
+            <h3>Fondo Inicial</h3>
+
+ 
+
+ 
+
+ 
+
+            <strong id="fondoInicialCaja">
+
+ 
+
+                $0.00
+
+ 
+
+            </strong>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="tarjetaCaja">
+
+ 
+
+ 
+
+ 
+
+            <h3>Entradas</h3>
+
+ 
+
+ 
+
+ 
+
+            <strong id="totalEntradasCaja">
+
+ 
+
+                $0.00
+
+ 
+
+            </strong>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="tarjetaCaja">
+
+ 
+
+ 
+
+ 
+
+            <h3>Salidas</h3>
+
+ 
+
+ 
+
+ 
+
+            <strong id="totalSalidasCaja">
+
+ 
+
+                $0.00
+
+ 
+
+            </strong>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="tarjetaCaja tarjetaTotalCaja">
+
+ 
+
+ 
+
+ 
+
+            <h3>Efectivo Esperado</h3>
+
+ 
+
+ 
+
+ 
+
+            <strong id="efectivoEsperadoCaja">
+
+ 
+
+                $0.00
+
+ 
+
+            </strong>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <section class="accionesCaja">
+
+ 
+
+ 
+
+ 
+
+        <button id="btnAbrirCaja">
+
+ 
+
+ 
+
+ 
+
+            🟢 Abrir Caja
+
+ 
+
+ 
+
+ 
+
+        </button>
+
+ 
+
+ 
+
+ 
+
+        <button id="btnEntradaCaja">
+
+ 
+
+ 
+
+ 
+
+            💰 Entrada
+
+ 
+
+ 
+
+ 
+
+        </button>
+
+ 
+
+ 
+
+ 
+
+        <button id="btnSalidaCaja">
+
+ 
+
+ 
+
+ 
+
+            💸 Gasto
+
+ 
+
+ 
+
+ 
+
+        </button>
+
+ 
+
+ 
+
+ 
+
+        <button id="btnMovimientosCaja">
+            📋 Movimientos
+        </button>
+        <button id="btnCerrarCaja">
+            🔒 Cerrar Caja
+        </button>
+<button id="btnTarjetasCaja">
+  💳 Tarjetas
+</button>
+
+<button id="btnTransferenciasCaja">
+  🏦 Transferencias
+</button>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+    <!-- LISTADOS DE PAGOS CON TARJETA Y TRANSFERENCIA -->
+
+    <section id="modalListadoTarjetasCaja" class="modalListadoPagosCaja oculto" aria-hidden="true">
+
+      <div class="fondoModalPagosCaja" data-cerrar-listado-tarjetas></div>
+
+      <div class="contenidoListadoPagosCaja" role="dialog" aria-modal="true" aria-labelledby="tituloListadoTarjetasCaja">
+
+        <header class="encabezadoListadoPagosCaja">
+
+          <div>
+
+            <span>Pagos del turno</span>
+
+            <h2 id="tituloListadoTarjetasCaja">💳 Tarjetas</h2>
+
+          </div>
+
+          <button id="btnCerrarListadoTarjetasCaja" type="button" aria-label="Cerrar">✕</button>
+
+        </header>
+
+        <div class="tablaListadoPagosCaja">
+
+          <table>
+
+            <thead><tr><th>Hora</th><th>Mesa</th><th>Folio</th><th>Importe</th></tr></thead>
+
+            <tbody id="cuerpoListadoTarjetasCaja"></tbody>
+
+          </table>
+
+        </div>
+
+        <footer class="totalListadoPagosCaja">
+
+          <span>TOTAL TARJETAS</span>
+
+          <strong id="totalListadoTarjetasCaja">$0.00</strong>
+
+        </footer>
+
+      </div>
+
+    </section>
+
+ 
+
+    <section id="modalListadoTransferenciasCaja" class="modalListadoPagosCaja oculto" aria-hidden="true">
+
+      <div class="fondoModalPagosCaja" data-cerrar-listado-transferencias></div>
+
+      <div class="contenidoListadoPagosCaja" role="dialog" aria-modal="true" aria-labelledby="tituloListadoTransferenciasCaja">
+
+        <header class="encabezadoListadoPagosCaja">
+
+          <div>
+
+            <span>Pagos del turno</span>
+
+            <h2 id="tituloListadoTransferenciasCaja">🏦 Transferencias</h2>
+
+          </div>
+
+          <button id="btnCerrarListadoTransferenciasCaja" type="button" aria-label="Cerrar">✕</button>
+
+        </header>
+
+        <div class="tablaListadoPagosCaja">
+
+          <table>
+
+            <thead><tr><th>Hora</th><th>Mesa</th><th>Folio</th><th>Importe</th></tr></thead>
+
+            <tbody id="cuerpoListadoTransferenciasCaja"></tbody>
+
+          </table>
+
+        </div>
+
+        <footer class="totalListadoPagosCaja">
+
+          <span>TOTAL TRANSFERENCIAS</span>
+
+          <strong id="totalListadoTransferenciasCaja">$0.00</strong>
+
+        </footer>
+
+      </div>
+
+    </section>
+
+ 
+
+    <!-- LISTADO Y MODALES DE GASTOS DE CAJA -->
+
+ 
+
+    <section class="resumenGastosCaja">
+
+ 
+
+      <div>
+
+ 
+
+        <span>Control y transparencia</span>
+
+ 
+
+        <h2>💸 Gastos del turno</h2>
+
+ 
+
+        <p>Cada gasto genera un vale firmado y permanece visible, incluso cuando se cancela.</p>
+
+ 
+
+      </div>
+
+ 
+
+      <button id="btnVerGastosCaja" type="button">📋 Ver gastos</button>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <section id="modalGastoCaja" class="modalGastoCaja oculto" aria-hidden="true">
+
+ 
+
+      <div class="fondoModalGastoCaja" data-cerrar-modal-gasto></div>
+
+ 
+
+      <div class="contenidoModalGastoCaja" role="dialog" aria-modal="true" aria-labelledby="tituloModalGastoCaja">
+
+ 
+
+        <header class="encabezadoModalGastoCaja">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Salida de efectivo</span>
+
+ 
+
+            <h2 id="tituloModalGastoCaja">💸 Registrar gasto</h2>
+
+ 
+
+          </div>
+
+ 
+
+          <button id="btnCerrarModalGastoCaja" type="button" aria-label="Cerrar">✕</button>
+
+ 
+
+        </header>
+
+ 
+
+ 
+
+ 
+
+        <form id="formGastoCaja" class="formGastoCaja">
+
+ 
+
+          <label for="conceptoGastoCaja">Concepto</label>
+
+ 
+
+          <input id="conceptoGastoCaja" type="text" maxlength="100" required>
+
+ 
+
+ 
+
+ 
+
+          <label for="descripcionGastoCaja">Descripción</label>
+
+ 
+
+          <textarea id="descripcionGastoCaja" rows="3" maxlength="300" required></textarea>
+
+ 
+
+ 
+
+ 
+
+          <label for="entregadoAGastoCaja">Entregado a</label>
+
+ 
+
+          <input id="entregadoAGastoCaja" type="text" maxlength="120" required>
+
+ 
+
+ 
+
+ 
+
+          <label for="importeGastoCaja">Importe pagado</label>
+
+ 
+
+          <input id="importeGastoCaja" type="number" min="0.01" step="0.01" inputmode="decimal" required>
+
+ 
+
+ 
+
+ 
+
+          <label for="observacionesGastoCaja">Observaciones (opcional)</label>
+
+ 
+
+          <textarea id="observacionesGastoCaja" rows="2" maxlength="300"></textarea>
+
+ 
+
+ 
+
+ 
+
+          <p class="avisoGastoCaja">
+
+ 
+
+            Al guardar se imprimirá el vale. Después no podrá editarse y para cancelarlo se requerirá autorización.
+
+ 
+
+          </p>
+
+ 
+
+ 
+
+ 
+
+          <footer class="accionesModalGastoCaja">
+
+ 
+
+            <button id="btnCancelarCapturaGastoCaja" type="button">Cancelar</button>
+
+ 
+
+            <button id="btnGuardarImprimirGastoCaja" type="submit">🖨️ Guardar e imprimir vale</button>
+
+ 
+
+          </footer>
+
+ 
+
+        </form>
 
  
 
@@ -354,55 +2234,655 @@
 
  
 
-<section
-
-  id="pantallaSistema"
-
-  class="pantallaSistema oculto"
-
->
+ 
 
  
 
-  <header class="encabezadoSistema">
+    <section id="modalListadoGastosCaja" class="modalListadoGastosCaja oculto" aria-hidden="true">
 
  
 
-    <div class="marcaEncabezado">
+      <div class="fondoModalGastoCaja" data-cerrar-listado-gastos></div>
 
-      <strong>🍽️ Restaurant</strong>
+ 
+
+      <div class="contenidoListadoGastosCaja" role="dialog" aria-modal="true" aria-labelledby="tituloListadoGastosCaja">
+
+ 
+
+        <header class="encabezadoModalGastoCaja">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Transparencia del turno</span>
+
+ 
+
+            <h2 id="tituloListadoGastosCaja">📋 Listado de gastos</h2>
+
+ 
+
+          </div>
+
+ 
+
+          <button id="btnCerrarListadoGastosCaja" type="button" aria-label="Cerrar">✕</button>
+
+ 
+
+        </header>
+
+ 
+
+ 
+
+ 
+
+        <div class="tablaListadoGastosCaja">
+
+ 
+
+          <table>
+
+ 
+
+            <thead>
+
+ 
+
+              <tr>
+
+ 
+
+                <th>Folio</th>
+
+ 
+
+                <th>Hora</th>
+
+ 
+
+                <th>Concepto</th>
+
+ 
+
+                <th>Entregado a</th>
+
+ 
+
+                <th>Importe</th>
+
+ 
+
+                <th>Estado</th>
+
+ 
+
+                <th>Acción</th>
+
+ 
+
+              </tr>
+
+ 
+
+            </thead>
+
+ 
+
+            <tbody id="cuerpoListadoGastosCaja"></tbody>
+
+ 
+
+          </table>
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <footer class="totalGastosCaja">
+
+ 
+
+          <span>Total de gastos activos del turno</span>
+
+ 
+
+          <strong id="totalListadoGastosCaja">$0.00</strong>
+
+ 
+
+        </footer>
+
+ 
+
+      </div>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <section id="modalDetalleGastoCaja" class="modalDetalleGastoCaja oculto" aria-hidden="true">
+
+ 
+
+      <div class="fondoModalGastoCaja" data-cerrar-detalle-gasto></div>
+
+ 
+
+      <div class="contenidoModalGastoCaja" role="dialog" aria-modal="true" aria-labelledby="tituloDetalleGastoCaja">
+
+ 
+
+        <header class="encabezadoModalGastoCaja">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Información completa</span>
+
+ 
+
+            <h2 id="tituloDetalleGastoCaja">Detalle del gasto</h2>
+
+ 
+
+          </div>
+
+ 
+
+          <button id="btnCerrarDetalleGastoCaja" type="button" aria-label="Cerrar">✕</button>
+
+ 
+
+        </header>
+
+ 
+
+ 
+
+ 
+
+        <div id="contenidoDetalleGastoCaja"></div>
+
+ 
+
+ 
+
+ 
+
+        <footer class="accionesModalGastoCaja">
+
+ 
+
+          <button id="btnReimprimirGastoCaja" type="button">🖨️ Reimprimir vale</button>
+
+ 
+
+          <button id="btnCancelarGastoCaja" class="btnCancelarGastoCaja" type="button">🚫 Cancelar con autorización</button>
+
+ 
+
+        </footer>
+
+ 
+
+      </div>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <section id="modalAutorizarCancelacionGasto" class="modalAutorizarCancelacionGasto oculto" aria-hidden="true">
+
+ 
+
+      <div class="fondoModalGastoCaja" data-cerrar-autorizacion-gasto></div>
+
+ 
+
+      <div class="contenidoModalGastoCaja" role="dialog" aria-modal="true" aria-labelledby="tituloAutorizarCancelacionGasto">
+
+ 
+
+        <header class="encabezadoModalGastoCaja">
+
+ 
+
+          <div>
+
+ 
+
+            <span>Gerente o administrador</span>
+
+ 
+
+            <h2 id="tituloAutorizarCancelacionGasto">🔐 Autorizar cancelación</h2>
+
+ 
+
+          </div>
+
+ 
+
+          <button id="btnCerrarAutorizarCancelacionGasto" type="button" aria-label="Cerrar">✕</button>
+
+ 
+
+        </header>
+
+ 
+
+ 
+
+ 
+
+        <form id="formAutorizarCancelacionGasto" class="formGastoCaja">
+
+ 
+
+          <label for="motivoCancelacionGasto">Motivo de la cancelación</label>
+
+ 
+
+          <textarea id="motivoCancelacionGasto" rows="3" maxlength="300" required></textarea>
+
+ 
+
+ 
+
+ 
+
+          <label for="usuarioAutorizaGasto">Usuario que autoriza</label>
+
+ 
+
+          <input id="usuarioAutorizaGasto" type="text" autocomplete="username" required>
+
+ 
+
+ 
+
+ 
+
+          <label for="passwordAutorizaGasto">Contraseña</label>
+
+ 
+
+          <input id="passwordAutorizaGasto" type="password" autocomplete="current-password" required>
+
+ 
+
+ 
+
+ 
+
+          <footer class="accionesModalGastoCaja">
+
+ 
+
+            <button id="btnCancelarAutorizacionGasto" type="button">Regresar</button>
+
+ 
+
+            <button id="btnConfirmarCancelacionGasto" class="btnCancelarGastoCaja" type="submit">
+
+ 
+
+              Autorizar y cancelar
+
+ 
+
+            </button>
+
+ 
+
+          </footer>
+
+ 
+
+        </form>
+
+ 
+
+      </div>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+    <section class="historialCaja">
+
+ 
+
+ 
+
+ 
+
+        <table>
+
+ 
+
+ 
+
+ 
+
+            <thead>
+
+ 
+
+ 
+
+ 
+
+                <tr>
+
+ 
+
+ 
+
+ 
+
+                    <th>Hora</th>
+
+ 
+
+ 
+
+ 
+
+                    <th>Concepto</th>
+
+ 
+
+ 
+
+ 
+
+                    <th>Entrada</th>
+
+ 
+
+ 
+
+ 
+
+                    <th>Salida</th>
+
+ 
+
+ 
+
+ 
+
+                    <th>Saldo</th>
+
+ 
+
+ 
+
+ 
+
+                </tr>
+
+ 
+
+ 
+
+ 
+
+            </thead>
+
+ 
+
+ 
+
+ 
+
+            <tbody id="tablaMovimientosCaja">
+
+ 
+
+ 
+
+ 
+
+            </tbody>
+
+ 
+
+ 
+
+ 
+
+        </table>
+
+ 
+
+ 
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <!-- =========================================
+
+ 
+
+     MESAS PENDIENTES DE COBRO
+
+ 
+
+     Aquí aparecerán las mesas que el mesero
+
+ 
+
+     haya marcado como "Por cobrar".
+
+ 
+
+     ========================================= -->
+
+ 
+
+ 
+
+ 
+
+<section class="seccionMesasPendientesCaja">
+
+ 
+
+ 
+
+ 
+
+  <header class="encabezadoMesasPendientesCaja">
+
+ 
+
+ 
+
+ 
+
+    <div>
+
+ 
+
+ 
+
+ 
+
+      <span class="etiquetaMesasPendientesCaja">
+
+ 
+
+        Servicio del restaurante
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+      <h2>
+
+ 
+
+        🧾 Pedidos enviados y cobros
+
+ 
+
+      </h2>
+
+ 
+
+ 
+
+ 
+
+      <p>
+
+ 
+
+        Los pedidos aparecen automáticamente al enviarse a cocina y pueden cobrarse aunque sigan preparándose.
+
+ 
+
+      </p>
+
+ 
+
+ 
+
+ 
 
     </div>
 
  
 
-    <div class="datosUsuario">
+ 
 
  
 
-      <span id="nombreUsuarioActivo"></span>
+    <div class="accionesMesasPendientesCaja">
 
  
 
-      <span id="rolUsuarioActivo"></span>
+ 
+
+ 
+
+      <span
+
+ 
+
+        id="contadorMesasPendientesCaja"
+
+ 
+
+        class="contadorMesasPendientesCaja"
+
+ 
+
+      >
+
+ 
+
+        0 pedidos
+
+ 
+
+      </span>
+
+ 
+
+ 
 
  
 
       <button
 
-        id="btnCerrarSesion"
+ 
+
+        id="btnActualizarMesasCaja"
+
+ 
+
+        class="btnActualizarMesasCaja"
+
+ 
 
         type="button"
 
+ 
+
       >
 
-        Cerrar sesión
+ 
+
+        🔄 Actualizar
+
+ 
 
       </button>
 
  
 
+ 
+
+ 
+
     </div>
+
+ 
+
+ 
 
  
 
@@ -410,211 +2890,83 @@
 
  
 
-  <!-- PANTALLA TEMPORAL PARA OTROS USUARIOS -->
+ 
 
-  <section
+ 
 
-    id="pantallaBienvenida"
+  <div
 
-    class="contenidoTemporal oculto"
+ 
+
+    id="contenedorMesasPendientesCaja"
+
+ 
+
+    class="contenedorMesasPendientesCaja"
+
+ 
 
   >
 
  
 
-    <h2 id="tituloBienvenida">
-
-      Bienvenido
-
-    </h2>
+ 
 
  
 
-    <p>
-
-      El inicio de sesión está funcionando.
-
-    </p>
+    <div class="sinMesasPendientesCaja">
 
  
 
-  </section>
+ 
 
  
 
-<!-- PANTALLA DEL MESERO -->
-
-<section
-
-  id="pantallaMesero"
-
-  class="pantallaMesero oculto"
-
->
+      <span>✅</span>
 
  
 
-  <!-- VISTA DE MESAS -->
-
-  <div id="vistaMesas">
+ 
 
  
 
-    <div class="barraMesero">
+      <strong>
 
  
 
-      <div>
-
-        <h1>Mesas del restaurante</h1>
+        No hay pedidos enviados a cocina
 
  
 
-        <p>
-
-          Selecciona una mesa para abrir o consultar su pedido.
-
-        </p>
-
-      </div>
+      </strong>
 
  
 
-      <button
-
-        id="btnActualizarMesas"
-
-        class="btnActualizarMesas"
-
-        type="button"
-
-      >
-
-        🔄 Actualizar
-
-      </button>
+ 
 
  
 
-    </div>
+      <p>
 
  
 
-    <div class="leyendaMesas">
+        Los pedidos aparecerán aquí automáticamente cuando el mesero los envíe a cocina.
 
  
-
-      <span>
-
-        <i class="colorEstado libre"></i>
-
-        Libre
-
-      </span>
-
- 
-
-      <span>
-
-        <i class="colorEstado ocupada"></i>
-
-        Ocupada
-
-      </span>
-
- 
-
-      <span>
-
-        <i class="colorEstado seleccionada"></i>
-
-        Seleccionada
-
-      </span>
-
- 
-
-      <span>
-
-        <i class="colorEstado cuenta"></i>
-
-        Por cobrar
-
-      </span>
-
- 
-
-    </div>
-
- 
-
-    <div
-
-      id="detalleMesaSeleccionada"
-
-      class="detalleMesaSeleccionada oculto"
-
-    >
-
- 
-
-      <div>
-
- 
-
-        <span>Mesa seleccionada</span>
-
- 
-
-        <strong id="nombreMesaSeleccionada">
-
-          Mesa
-
-        </strong>
-
- 
-
-      </div>
-
- 
-
-      <button
-
-        id="btnAbrirMesa"
-
-        type="button"
-
-      >
-
-        Abrir pedido
-
-      </button>
-
- 
-
-    </div>
-
- 
-
-    <div
-
-      id="contenedorMesas"
-
-      class="contenedorMesas"
-
-    >
-
- 
-
-      <p class="cargandoMesas">
-
-        Cargando mesas...
 
       </p>
 
  
 
+ 
+
+ 
+
     </div>
+
+ 
+
+ 
 
  
 
@@ -622,35 +2974,39 @@
 
  
 
-  <!-- VISTA DEL PEDIDO DE LA MESA -->
-
-  <section
-
-    id="vistaPedidoMesa"
-
-    class="vistaPedidoMesa oculto"
-
-  >
+ 
 
  
 
-    <header class="encabezadoPedidoMesa">
+</section>
 
  
 
-      <button
+ 
 
-        id="btnRegresarMesas"
+ 
 
-        class="btnRegresarMesas"
+<!-- MODAL PARA REGISTRAR EL PAGO -->
 
-        type="button"
+ 
 
-      >
+<section id="modalCobroCaja" class="modalCobroCaja oculto" aria-hidden="true">
 
-        ← Mesas
+ 
 
-      </button>
+  <div class="fondoModalCobroCaja" data-cerrar-cobro-caja></div>
+
+ 
+
+ 
+
+ 
+
+  <div class="contenidoModalCobroCaja" role="dialog" aria-modal="true" aria-labelledby="tituloModalCobroCaja">
+
+ 
+
+    <header class="encabezadoModalCobroCaja">
 
  
 
@@ -658,15 +3014,11 @@
 
  
 
-        <span>Pedido actual</span>
+        <span>Registrar pago</span>
 
  
 
-        <h1 id="tituloPedidoMesa">
-
-          Mesa
-
-        </h1>
+        <h2 id="tituloModalCobroCaja">Mesa</h2>
 
  
 
@@ -674,17 +3026,7 @@
 
  
 
-      <span
-
-        id="estadoPedidoMesa"
-
-        class="estadoPedidoActual"
-
-      >
-
-        Libre
-
-      </span>
+      <button id="btnCerrarModalCobroCaja" type="button" aria-label="Cerrar">✕</button>
 
  
 
@@ -692,177 +3034,79 @@
 
  
 
-    <div class="pestanasPedido">
+ 
 
  
 
-      <div
-
-        id="pestanasComensales"
-
-        class="pestanasComensales"
-
-      ></div>
+    <div id="detalleModalCobroCaja" class="detalleModalCobroCaja"></div>
 
  
 
-    </div>
+ 
 
  
 
-    <div class="contenidoPedidoMesa">
+    <section class="datosPagoCaja">
 
  
 
-      <!-- PANEL DEL MENÚ -->
-
-      <section class="panelMenuTemporal">
+      <label for="propinaPagoCaja">Propina</label>
 
  
 
-        <div class="tituloPanelPedido">
+      <input id="propinaPagoCaja" type="number" min="0" step="0.01" value="0" inputmode="decimal">
 
  
 
-          <div>
+ 
 
  
 
-            <span>Menú</span>
+      <label for="formaPagoCaja">Forma de pago</label>
 
  
 
-            <h2>
-
-              Platillos y bebidas
-
-            </h2>
+      <select id="formaPagoCaja">
 
  
 
-          </div>
+        <option value="Efectivo">Efectivo</option>
 
  
 
-        </div>
+        <option value="Tarjeta">Tarjeta</option>
 
  
 
-        <div
-
-          id="contenedorMenu"
-
-          class="menuPendiente"
-
-        >
-
-          <p class="cargandoMenu">
-
-            Cargando menú...
-
-          </p>
-
-        </div>
+        <option value="Transferencia">Transferencia</option>
 
  
 
-      </section>
+        <option value="Mixto">Mixto</option>
 
  
 
-      <!-- PANEL DEL COMENSAL -->
-
-      <section class="panelPedidoComensal">
+      </select>
 
  
 
-        <div class="tituloPanelPedido">
+ 
 
  
 
-          <div>
+      <div id="bloqueEntregaEfectivoCaja" class="bloqueEntregaEfectivoCaja">
 
  
 
-            <span>Consumo actual</span>
+        <label for="entregaEfectivoCaja">El cliente entrega</label>
 
  
 
-            <h2 id="tituloComensalActivo">
-
-              Comensal 1
-
-            </h2>
+        <input id="entregaEfectivoCaja" type="number" min="0" step="0.01" value="0" inputmode="decimal">
 
  
 
-          </div>
-
- 
-
-        </div>
-
- 
-
-        <div
-
-          id="listaPedidoComensal"
-
-          class="listaPedidoComensal"
-
-        ></div>
-
- 
-
-        <div class="resumenComensal">
-
- 
-
-          <span>
-
-            Subtotal del comensal
-
-          </span>
-
- 
-
-          <strong id="subtotalComensal">
-
-            $0.00
-
-          </strong>
-
- 
-
-        </div>
-
- 
-
-      </section>
-
- 
-
-    </div>
-
- 
-
-    <footer class="piePedidoMesa">
-
- 
-
-      <div>
-
- 
-
-        <span>Total de la mesa</span>
-
- 
-
-        <strong id="totalMesaPedido">
-
-          $0.00
-
-        </strong>
+        <p>Cambio: <strong id="cambioPagoCaja">$0.00</strong></p>
 
  
 
@@ -870,19 +3114,83 @@
 
  
 
-      <button
+ 
 
-        id="btnEnviarCocina"
+ 
 
-        type="button"
+      <div id="bloquePagoMixtoCaja" class="bloquePagoMixtoCaja oculto">
 
-        disabled
+        <label for="montoEfectivoMixtoCaja">Efectivo</label>
 
-      >
+        <input id="montoEfectivoMixtoCaja" type="number" min="0" step="0.01" value="0" inputmode="decimal">
 
-        Enviar a cocina
+ 
 
-      </button>
+        <label for="montoTarjetaMixtoCaja">Tarjeta</label>
+
+        <input id="montoTarjetaMixtoCaja" type="number" min="0" step="0.01" value="0" inputmode="decimal">
+
+ 
+
+        <label for="montoTransferenciaMixtoCaja">Transferencia</label>
+
+        <input id="montoTransferenciaMixtoCaja" type="number" min="0" step="0.01" value="0" inputmode="decimal">
+
+ 
+
+        <div class="resumenCapturaMixtaCaja">
+
+          <span>Total capturado</span>
+
+          <strong id="totalCapturadoMixtoCaja">$0.00</strong>
+
+        </div>
+
+        <p id="diferenciaPagoMixtoCaja" class="diferenciaPagoMixtoCaja">Faltan $0.00</p>
+
+        <small>Utiliza dos o tres formas de pago. La suma debe coincidir exactamente con el total.</small>
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <div class="resumenPagoFinalCaja">
+
+ 
+
+        <span>Total con propina</span>
+
+ 
+
+        <strong id="totalConPropinaCaja">$0.00</strong>
+
+ 
+
+      </div>
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <footer class="accionesModalCobroCaja">
+
+ 
+
+      <button id="btnCancelarCobroCaja" class="btnCancelarCobroCaja" type="button">Cancelar</button>
+
+ 
+
+      <button id="btnConfirmarCobroCaja" class="btnConfirmarCobroCaja" type="button">💳 Confirmar pago</button>
 
  
 
@@ -890,11 +3198,1287 @@
 
  
 
+  </div>
+
+ 
+
+</section>
+
+ 
+
+ 
+
+ 
+
+</section>
+
+ 
+
+ 
+
+ 
+
+<!-- PANTALLA DEL MESERO -->
+
+ 
+
+ 
+
+ 
+
+<section
+
+ 
+
+ 
+
+ 
+
+  id="pantallaMesero"
+
+ 
+
+ 
+
+ 
+
+  class="pantallaMesero oculto"
+
+ 
+
+ 
+
+ 
+
+>
+
+ 
+
+ 
+
+ 
+
+  <!-- VISTA DE MESAS -->
+
+ 
+
+ 
+
+ 
+
+  <div id="vistaMesas">
+
+ 
+
+ 
+
+ 
+
+    <div class="barraMesero">
+
+ 
+
+ 
+
+ 
+
+      <div>
+
+ 
+
+ 
+
+ 
+
+        <h1>Mesas del restaurante</h1>
+
+ 
+
+ 
+
+ 
+
+        <p>
+
+ 
+
+ 
+
+ 
+
+          Selecciona una mesa para abrir o consultar su pedido.
+
+ 
+
+ 
+
+ 
+
+        </p>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <button
+
+ 
+
+ 
+
+ 
+
+        id="btnActualizarMesas"
+
+ 
+
+ 
+
+ 
+
+        class="btnActualizarMesas"
+
+ 
+
+ 
+
+ 
+
+        type="button"
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        🔄 Actualizar
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <div class="leyendaMesas">
+
+ 
+
+ 
+
+ 
+
+      <span>
+
+ 
+
+ 
+
+ 
+
+        <i class="colorEstado libre"></i>
+
+ 
+
+ 
+
+ 
+
+        Libre
+
+ 
+
+ 
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+      <span>
+
+ 
+
+ 
+
+ 
+
+        <i class="colorEstado ocupada"></i>
+
+ 
+
+ 
+
+ 
+
+        Ocupada
+
+ 
+
+ 
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+      <span>
+
+ 
+
+ 
+
+ 
+
+        <i class="colorEstado seleccionada"></i>
+
+ 
+
+ 
+
+ 
+
+        Seleccionada
+
+ 
+
+ 
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+      <span>
+
+ 
+
+ 
+
+ 
+
+        <i class="colorEstado cuenta"></i>
+
+ 
+
+ 
+
+ 
+
+        Por cobrar
+
+ 
+
+ 
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <div
+
+ 
+
+ 
+
+ 
+
+      id="detalleMesaSeleccionada"
+
+ 
+
+ 
+
+ 
+
+      class="detalleMesaSeleccionada oculto"
+
+ 
+
+ 
+
+ 
+
+    >
+
+ 
+
+ 
+
+ 
+
+      <div>
+
+ 
+
+ 
+
+ 
+
+        <span>Mesa seleccionada</span>
+
+ 
+
+ 
+
+ 
+
+        <strong id="nombreMesaSeleccionada">
+
+ 
+
+ 
+
+ 
+
+          Mesa
+
+ 
+
+ 
+
+ 
+
+        </strong>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <button
+
+ 
+
+ 
+
+ 
+
+        id="btnAbrirMesa"
+
+ 
+
+ 
+
+ 
+
+        type="button"
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        Abrir pedido
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <div
+
+ 
+
+ 
+
+ 
+
+      id="contenedorMesas"
+
+ 
+
+ 
+
+ 
+
+      class="contenedorMesas"
+
+ 
+
+ 
+
+ 
+
+    >
+
+ 
+
+ 
+
+ 
+
+      <p class="cargandoMesas">
+
+ 
+
+ 
+
+ 
+
+        Cargando mesas...
+
+ 
+
+ 
+
+ 
+
+      </p>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+  </div>
+
+ 
+
+ 
+
+ 
+
+  <!-- VISTA DEL PEDIDO DE LA MESA -->
+
+ 
+
+ 
+
+ 
+
+  <section
+
+ 
+
+ 
+
+ 
+
+    id="vistaPedidoMesa"
+
+ 
+
+ 
+
+ 
+
+    class="vistaPedidoMesa oculto"
+
+ 
+
+ 
+
+ 
+
+  >
+
+ 
+
+ 
+
+ 
+
+    <header class="encabezadoPedidoMesa">
+
+ 
+
+ 
+
+ 
+
+      <button
+
+ 
+
+ 
+
+ 
+
+        id="btnRegresarMesas"
+
+ 
+
+ 
+
+ 
+
+        class="btnRegresarMesas"
+
+ 
+
+ 
+
+ 
+
+        type="button"
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        ← Mesas
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+      <div>
+
+ 
+
+ 
+
+ 
+
+        <span>Pedido actual</span>
+
+ 
+
+ 
+
+ 
+
+        <h1 id="tituloPedidoMesa">
+
+ 
+
+ 
+
+ 
+
+          Mesa
+
+ 
+
+ 
+
+ 
+
+        </h1>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <span
+
+ 
+
+ 
+
+ 
+
+        id="estadoPedidoMesa"
+
+ 
+
+ 
+
+ 
+
+        class="estadoPedidoActual"
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        Libre
+
+ 
+
+ 
+
+ 
+
+      </span>
+
+ 
+
+ 
+
+ 
+
+    </header>
+
+ 
+
+ 
+
+ 
+
+    <div class="pestanasPedido">
+
+ 
+
+ 
+
+ 
+
+      <div
+
+ 
+
+ 
+
+ 
+
+        id="pestanasComensales"
+
+ 
+
+ 
+
+ 
+
+        class="pestanasComensales"
+
+ 
+
+ 
+
+ 
+
+      ></div>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <div class="contenidoPedidoMesa">
+
+ 
+
+ 
+
+ 
+
+      <!-- PANEL DEL MENÚ -->
+
+ 
+
+ 
+
+ 
+
+      <section class="panelMenuTemporal">
+
+ 
+
+ 
+
+ 
+
+        <div class="tituloPanelPedido">
+
+ 
+
+ 
+
+ 
+
+          <div>
+
+ 
+
+ 
+
+ 
+
+            <span>Menú</span>
+
+ 
+
+ 
+
+ 
+
+            <h2>
+
+ 
+
+ 
+
+ 
+
+              Platillos y bebidas
+
+ 
+
+ 
+
+ 
+
+            </h2>
+
+ 
+
+ 
+
+ 
+
+          </div>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div
+
+ 
+
+ 
+
+ 
+
+          id="contenedorMenu"
+
+ 
+
+ 
+
+ 
+
+          class="menuPendiente"
+
+ 
+
+ 
+
+ 
+
+        >
+
+ 
+
+ 
+
+ 
+
+          <p class="cargandoMenu">
+
+ 
+
+ 
+
+ 
+
+            Cargando menú...
+
+ 
+
+ 
+
+ 
+
+          </p>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+      </section>
+
+ 
+
+ 
+
+ 
+
+      <!-- PANEL DEL COMENSAL -->
+
+ 
+
+ 
+
+ 
+
+      <section class="panelPedidoComensal">
+
+ 
+
+ 
+
+ 
+
+        <div class="tituloPanelPedido">
+
+ 
+
+ 
+
+ 
+
+          <div>
+
+ 
+
+ 
+
+ 
+
+            <span>Consumo actual</span>
+
+ 
+
+ 
+
+ 
+
+            <h2 id="tituloComensalActivo">
+
+ 
+
+ 
+
+ 
+
+              Comensal 1
+
+ 
+
+ 
+
+ 
+
+            </h2>
+
+ 
+
+ 
+
+ 
+
+          </div>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div
+
+ 
+
+ 
+
+ 
+
+          id="listaPedidoComensal"
+
+ 
+
+ 
+
+ 
+
+          class="listaPedidoComensal"
+
+ 
+
+ 
+
+ 
+
+        ></div>
+
+ 
+
+ 
+
+ 
+
+        <div class="resumenComensal">
+
+ 
+
+ 
+
+ 
+
+          <span>
+
+ 
+
+ 
+
+ 
+
+            Subtotal del comensal
+
+ 
+
+ 
+
+ 
+
+          </span>
+
+ 
+
+ 
+
+ 
+
+          <strong id="subtotalComensal">
+
+ 
+
+ 
+
+ 
+
+            $0.00
+
+ 
+
+ 
+
+ 
+
+          </strong>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+      </section>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+    <footer class="piePedidoMesa">
+
+ 
+
+ 
+
+ 
+
+      <div>
+
+ 
+
+ 
+
+ 
+
+        <span>Total de la mesa</span>
+
+ 
+
+ 
+
+ 
+
+        <strong id="totalMesaPedido">
+
+ 
+
+ 
+
+ 
+
+          $0.00
+
+ 
+
+ 
+
+ 
+
+        </strong>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <button
+
+ 
+
+ 
+
+ 
+
+        id="btnEnviarCocina"
+
+ 
+
+ 
+
+ 
+
+        type="button"
+
+ 
+
+ 
+
+ 
+
+        disabled
+
+ 
+
+ 
+
+ 
+
+      >
+
+ 
+
+ 
+
+ 
+
+        Enviar a cocina
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+    </footer>
+
+ 
+
+ 
+
+ 
+
   </section>
 
  
 
-</section>
+ 
 
  
 
@@ -902,7 +4486,1117 @@
 
  
 
-  </main>
+ 
+
+ 
+
+   <!-- PANTALLA DE COCINA: DISEÑADA PARA TABLET O COMPUTADORA -->
+
+ 
+
+ 
+
+ 
+
+  <section
+
+ 
+
+ 
+
+ 
+
+    id="pantallaCocina"
+
+ 
+
+ 
+
+ 
+
+    class="pantallaCocina oculto"
+
+ 
+
+ 
+
+ 
+
+  >
+
+ 
+
+ 
+
+ 
+
+    <header class="encabezadoCocina">
+
+ 
+
+ 
+
+ 
+
+      <div>
+
+ 
+
+ 
+
+ 
+
+        <span class="etiquetaCocina">Área de preparación</span>
+
+ 
+
+ 
+
+ 
+
+        <h1>🍳 Cocina</h1>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <button id="btnVerHistoricoCocina" class="btnHistoricoCocina" type="button">
+
+ 
+
+ 
+
+ 
+
+        Ver histórico
+
+ 
+
+ 
+
+ 
+
+      </button>
+
+ 
+
+ 
+
+ 
+
+    </header>
+
+ 
+
+ 
+
+ 
+
+    <section id="vistaPedidosCocina" class="vistaCocina">
+
+ 
+
+ 
+
+ 
+
+      <div id="contenedorPedidosCocina" class="contenedorTarjetasCocina"></div>
+
+ 
+
+ 
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+    <section id="vistaHistoricoCocina" class="vistaCocina oculto">
+
+ 
+
+ 
+
+ 
+
+      <div class="barraHistoricoCocina">
+
+ 
+
+ 
+
+ 
+
+        <div>
+
+ 
+
+ 
+
+ 
+
+          <span>Pedidos finalizados</span>
+
+ 
+
+ 
+
+ 
+
+          <h2>Histórico</h2>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <button id="btnVolverPedidosCocina" class="btnVolverCocina" type="button">
+
+ 
+
+ 
+
+ 
+
+          ← Volver a pedidos
+
+ 
+
+ 
+
+ 
+
+        </button>
+
+ 
+
+ 
+
+ 
+
+      </div>
+
+ 
+
+ 
+
+ 
+
+      <div id="contenedorHistoricoCocina" class="contenedorTarjetasCocina historicoCocina"></div>
+
+ 
+
+ 
+
+ 
+
+    </section>
+
+ 
+
+ 
+
+ 
+
+  </section>
+
+ 
+
+ 
+
+ 
+
+</section>
+
+ 
+
+ 
+
+ 
+
+   </main>
+
+ 
+
+ 
+
+ 
+
+   <!-- MODAL DE ALTA Y MODIFICACIÓN DE EMPLEADOS -->
+
+ 
+
+ 
+
+ 
+
+  <section
+
+ 
+
+ 
+
+ 
+
+    id="modalEmpleado"
+
+ 
+
+ 
+
+ 
+
+    class="modalEmpleado oculto"
+
+ 
+
+ 
+
+ 
+
+    aria-hidden="true"
+
+ 
+
+ 
+
+ 
+
+  >
+
+ 
+
+ 
+
+ 
+
+    <div class="fondoModalEmpleado" data-cerrar-modal-empleado></div>
+
+ 
+
+ 
+
+ 
+
+    <div
+
+ 
+
+ 
+
+ 
+
+      class="contenidoModalEmpleado"
+
+ 
+
+ 
+
+ 
+
+      role="dialog"
+
+ 
+
+ 
+
+ 
+
+      aria-modal="true"
+
+ 
+
+ 
+
+ 
+
+      aria-labelledby="tituloModalEmpleado"
+
+ 
+
+ 
+
+ 
+
+    >
+
+ 
+
+ 
+
+ 
+
+      <header class="encabezadoModalEmpleado">
+
+ 
+
+ 
+
+ 
+
+        <div>
+
+ 
+
+ 
+
+ 
+
+          <span id="accionModalEmpleado">Alta de empleado</span>
+
+ 
+
+ 
+
+ 
+
+          <h2 id="tituloModalEmpleado">Nuevo empleado</h2>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <button
+
+ 
+
+ 
+
+ 
+
+          id="btnCerrarModalEmpleado"
+
+ 
+
+ 
+
+ 
+
+          class="btnCerrarModalEmpleado"
+
+ 
+
+ 
+
+ 
+
+          type="button"
+
+ 
+
+ 
+
+ 
+
+          aria-label="Cerrar"
+
+ 
+
+ 
+
+ 
+
+        >
+
+ 
+
+ 
+
+ 
+
+          ✕
+
+ 
+
+ 
+
+ 
+
+        </button>
+
+ 
+
+ 
+
+ 
+
+      </header>
+
+ 
+
+ 
+
+ 
+
+      <form id="formEmpleado" class="formEmpleado">
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado campoNumeroEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="numeroEmpleado">Número de empleado</label>
+
+ 
+
+ 
+
+ 
+
+          <input id="numeroEmpleado" type="text" readonly>
+
+ 
+
+ 
+
+ 
+
+          <small>Se asigna automáticamente y nunca cambia.</small>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado campoEmpleadoCompleto">
+
+ 
+
+ 
+
+ 
+
+          <label for="nombreEmpleado">Nombre completo</label>
+
+ 
+
+ 
+
+ 
+
+          <input
+
+ 
+
+ 
+
+ 
+
+            id="nombreEmpleado"
+
+ 
+
+ 
+
+ 
+
+            type="text"
+
+ 
+
+ 
+
+ 
+
+            maxlength="100"
+
+ 
+
+ 
+
+ 
+
+            autocomplete="name"
+
+ 
+
+ 
+
+ 
+
+            required
+
+ 
+
+ 
+
+ 
+
+          >
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="usuarioEmpleado">Usuario</label>
+
+ 
+
+ 
+
+ 
+
+          <input
+
+ 
+
+ 
+
+ 
+
+            id="usuarioEmpleado"
+
+ 
+
+ 
+
+ 
+
+            type="text"
+
+ 
+
+ 
+
+ 
+
+            maxlength="30"
+
+ 
+
+ 
+
+ 
+
+            autocomplete="off"
+
+ 
+
+ 
+
+ 
+
+            required
+
+ 
+
+ 
+
+ 
+
+          >
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="passwordEmpleado">Contraseña</label>
+
+ 
+
+ 
+
+ 
+
+          <div class="campoPasswordEmpleado">
+
+ 
+
+ 
+
+ 
+
+            <input
+
+ 
+
+ 
+
+ 
+
+              id="passwordEmpleado"
+
+ 
+
+ 
+
+ 
+
+              type="password"
+
+ 
+
+ 
+
+ 
+
+              minlength="4"
+
+ 
+
+ 
+
+ 
+
+              maxlength="50"
+
+ 
+
+ 
+
+ 
+
+              autocomplete="new-password"
+
+ 
+
+ 
+
+ 
+
+              required
+
+ 
+
+ 
+
+ 
+
+            >
+
+ 
+
+ 
+
+ 
+
+            <button id="btnMostrarPasswordEmpleado" type="button" aria-label="Mostrar contraseña">👁️</button>
+
+ 
+
+ 
+
+ 
+
+          </div>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="puestoEmpleado">Puesto</label>
+
+ 
+
+ 
+
+ 
+
+          <select id="puestoEmpleado" required>
+
+ 
+
+ 
+
+ 
+
+            <option value="">Selecciona un puesto</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="admin">Administrador</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="mesero">Mesero</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="cocina">Cocina</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="cajero">Cajero</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="limpieza">Limpieza</option>
+
+ 
+
+ 
+
+ 
+
+          </select>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="telefonoEmpleado">Teléfono</label>
+
+ 
+
+ 
+
+ 
+
+          <input
+
+ 
+
+ 
+
+ 
+
+            id="telefonoEmpleado"
+
+ 
+
+ 
+
+ 
+
+            type="tel"
+
+ 
+
+ 
+
+ 
+
+            maxlength="20"
+
+ 
+
+ 
+
+ 
+
+            autocomplete="tel"
+
+ 
+
+ 
+
+ 
+
+          >
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="fechaIngresoEmpleado">Fecha de ingreso</label>
+
+ 
+
+ 
+
+ 
+
+          <input id="fechaIngresoEmpleado" type="date" required>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <div class="campoEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <label for="estadoEmpleado">Estado</label>
+
+ 
+
+ 
+
+ 
+
+          <select id="estadoEmpleado" required>
+
+ 
+
+ 
+
+ 
+
+            <option value="activo">Activo</option>
+
+ 
+
+ 
+
+ 
+
+            <option value="inactivo">Inactivo</option>
+
+ 
+
+ 
+
+ 
+
+          </select>
+
+ 
+
+ 
+
+ 
+
+          <small id="avisoEmpleadoProtegido" class="avisoEmpleadoProtegido oculto">El administrador principal no puede quedar inactivo.</small>
+
+ 
+
+ 
+
+ 
+
+        </div>
+
+ 
+
+ 
+
+ 
+
+        <p id="mensajeEmpleado" class="mensajeEmpleado" aria-live="polite"></p>
+
+ 
+
+ 
+
+ 
+
+        <footer class="pieModalEmpleado">
+
+ 
+
+ 
+
+ 
+
+          <button id="btnCancelarEmpleado" class="btnCancelarEmpleado" type="button">Cancelar</button>
+
+ 
+
+ 
+
+ 
+
+          <button id="btnGuardarEmpleado" class="btnGuardarEmpleado" type="submit">Guardar empleado</button>
+
+ 
+
+ 
+
+ 
+
+        </footer>
+
+ 
+
+ 
+
+ 
+
+      </form>
+
+ 
+
+ 
+
+ 
+
+    </div>
+
+ 
+
+ 
+
+ 
+
+  </section>
+
+ 
 
  
 
@@ -910,228 +5604,558 @@
 
   <!-- MODAL PARA MODIFICAR OBSERVACIONES Y EXTRAS DEL PRODUCTO -->
 
+ 
+
+ 
+
+ 
+
   <section
+
+ 
+
+ 
+
+ 
 
     id="modalProducto"
 
+ 
+
+ 
+
+ 
+
     class="modalProducto oculto"
+
+ 
+
+ 
+
+ 
 
     aria-hidden="true"
 
-  >
+ 
 
-    <div
+ >
+
+ 
+
+     <div
+
+ 
+
+ 
+
+ 
 
       class="fondoModalProducto"
 
+ 
+
+ 
+
+ 
+
       data-cerrar-modal-producto
+
+ 
+
+ 
+
+ 
 
     ></div>
 
  
 
+ 
+
+ 
+
     <div
+
+ 
+
+ 
+
+ 
 
       class="contenidoModalProducto"
 
+ 
+
+ 
+
+ 
+
       role="dialog"
+
+ 
+
+ 
+
+ 
 
       aria-modal="true"
 
+ 
+
+ 
+
+ 
+
       aria-labelledby="nombreProductoModal"
+
+ 
+
+ 
+
+ 
 
     >
 
+ 
+
+ 
+
+ 
+
       <header class="encabezadoModalProducto">
+
+ 
+
+ 
+
+ 
 
         <div>
 
+ 
+
+ 
+
+ 
+
           <span id="textoAccionProductoModal">Modificar producto</span>
 
+ 
+
+ 
+
+ 
+
           <h2 id="nombreProductoModal">Producto</h2>
+
+ 
+
+ 
+
+ 
 
         </div>
 
  
 
+ 
+
+ 
+
         <button
+
+ 
+
+ 
+
+ 
 
           id="btnCerrarModalProducto"
 
+ 
+
+ 
+
+ 
+
           class="btnCerrarModalProducto"
+
+ 
+
+ 
+
+ 
 
           type="button"
 
+ 
+
+ 
+
+ 
+
           aria-label="Cerrar"
+
+ 
+
+ 
+
+ 
 
         >
 
+ 
+
+ 
+
+ 
+
           ✕
 
+ 
+
+ 
+
+ 
+
         </button>
+
+ 
+
+ 
+
+ 
 
       </header>
 
  
 
+ 
+
+ 
+
       <div class="cuerpoModalProducto">
+
+ 
+
+ 
+
+ 
 
         <div class="precioProductoModal">
 
+ 
+
+ 
+
+ 
+
           <span>Precio unitario</span>
 
+ 
+
+ 
+
+ 
+
           <strong id="precioProductoModal">$0.00</strong>
+
+ 
+
+ 
+
+ 
 
         </div>
 
  
 
+ 
+
+ 
+
         <section class="seccionObservacionesProducto">
+
+ 
+
+ 
+
+ 
 
           <h3>Observaciones rápidas</h3>
 
  
 
+ 
+
+ 
+
           <div
+
+ 
+
+ 
+
+ 
 
             id="opcionesObservacionesProducto"
 
+ 
+
+ 
+
+ 
+
             class="opcionesObservacionesProducto"
+
+ 
+
+ 
+
+ 
 
           ></div>
 
+ 
+
+ 
+
+ 
+
         </section>
+
+ 
+
+ 
 
  
 
         <section id="seccionExtrasProducto" class="seccionObservacionesProducto oculto">
 
+ 
+
+ 
+
+ 
+
           <h3>Extras con costo</h3>
+
+ 
+
+ 
 
  
 
           <div
 
+ 
+
+ 
+
+ 
+
             id="opcionesExtrasProducto"
+
+ 
+
+ 
+
+ 
 
             class="opcionesObservacionesProducto"
 
+ 
+
+ 
+
+ 
+
           ></div>
 
+ 
+
+ 
+
+ 
+
         </section>
+
+ 
+
+ 
 
  
 
         <section class="seccionNotaProducto">
 
+ 
+
+ 
+
+ 
+
           <label for="notaProductoModal">
 
+ 
+
+ 
+
+ 
+
             Observación adicional
+
+ 
+
+ 
+
+ 
 
           </label>
 
  
 
+ 
+
+ 
+
           <textarea
+
+ 
+
+ 
+
+ 
 
             id="notaProductoModal"
 
+ 
+
+ 
+
+ 
+
             rows="3"
+
+ 
+
+ 
+
+ 
 
             maxlength="180"
 
+ 
+
+ 
+
+ 
+
             placeholder="Ejemplo: servir la salsa aparte"
+
+ 
+
+ 
+
+ 
 
           ></textarea>
 
  
 
+ 
+
+ 
+
           <small>
+
+ 
+
+ 
+
+ 
 
             Máximo 180 caracteres
 
+ 
+
+ 
+
+ 
+
           </small>
 
+ 
+
+ 
+
+ 
+
         </section>
+
+ 
+
+ 
+
+ 
 
       </div>
 
  
 
+ 
+
+ 
+
       <footer class="pieModalProducto">
 
-        <button
+ 
 
+ 
+
+ 
+
+        <button
           id="btnEliminarProducto"
-
           class="btnEliminarProducto"
-
           type="button"
-
         >
-
           Eliminar producto
-
         </button>
-
- 
-
         <button
-
           id="btnCancelarProducto"
-
           class="btnCancelarProducto"
-
           type="button"
-
         >
-
           Cancelar
-
         </button>
-
- 
-
         <button
-
           id="btnConfirmarProducto"
-
           class="btnConfirmarProducto"
-
           type="button"
-
         >
-
           Guardar cambios
-
         </button>
-
       </footer>
-
     </div>
-
   </section>
 
- 
-
 <script src="script.js"></script>
-
 <script src="js/comensales.js"></script>
-
 <script src="js/menu.js"></script>
-
 <script src="js/mesas.js"></script>
-
+<script src="js/cocina.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/caja.js"></script>
+<script src="js/cajaGastos.js"></script>
 <script src="js/login.js"></script>
-
- 
+<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+<script src="js/reportes.js"></script>
+<script src="js/reporteArticulos.js"></script>
 
 <script>
-
   inicializarMenu();
-
 </script>
-
 </body>
-
 </html>
+
+
